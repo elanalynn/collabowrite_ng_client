@@ -1,0 +1,24 @@
+<div class="container full-page-container">
+  <h1>Recent Stories</h1>
+  <div class="story-list">
+      <div class="story-container" ng-repeat="vm.stories as story">
+        <div class="story-info-container">
+          <a ui-sref="{{}}"><h3 class="story-title">{{story.title}}</h3></a>
+          <p class="story-summary">{{story.summary}}</p>
+          <div class="story-meta-data">
+            <p class="story-user">Created by: {{story.user.firstName}} {{story.user.lastName}}</p>
+            <p class="story-genre">Genre: {{story.genreId}}</p>
+            <p class="story-start-date">Created: {{moment-from-now story.startDate}}</p>
+          </div>
+        </div>
+        <div class="btn-container">
+          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Read More
+          </a>
+          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Contribute
+          </a>
+        </div>
+      </div>
+  </div>
+</div>

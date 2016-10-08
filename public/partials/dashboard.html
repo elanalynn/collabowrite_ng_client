@@ -1,0 +1,23 @@
+<div class="container full-page-container">
+  <div class="dash-header">
+    <h3>Hello {{model.username}}</h3>
+
+  </div>
+
+  <div class="dash-folders">
+    <ul class="nav nav-tabs nav-tabs-custom">
+      {{#link-to "dashboard.profile" tagName="li" class="my-profile"}}My Profile{{/link-to}}
+      {{#link-to "dashboard.stories" tagName="li" class="my-stories active"}}My Stories{{/link-to}}
+      {{#link-to "dashboard.contributions" tagName="li" class="my-contributions"}}My Contributions{{/link-to}}
+      {{#link-to "dashboard.pending" tagName="li" class="my-pending"}}Pending Approval{{/link-to}}
+      {{#link-to "dashboard.starred" tagName="li" class="my-starred"}}Starred{{/link-to}}
+    </ul>
+    <div class="dash-sections">
+      <article class="inner-section">
+        {{new-story-btn}}
+        {{outlet}}
+      </article>
+    </div>
+  </div>
+
+</div>

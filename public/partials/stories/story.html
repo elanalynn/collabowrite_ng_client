@@ -1,0 +1,19 @@
+<div class="container full-page-container">
+  <h1>{{story.title}}</h1>
+  <div class="story-list">
+      <div class="story-container">
+        <div class="story-info-container">
+          {{#link-to "story"}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
+          <p class="story-summary">{{story.summary}}</p>
+          <div class="story-meta-data">
+            <p class="story-user">Created by: {{story.user.firstName}} {{story.user.lastName}}</p>
+            <p class="story-genre">Genre: {{story.genreId}}</p>
+            <p class="story-start-date">Created on: {{story.startDate}}</p>
+          </div>
+        </div>
+        <div class="btn-container">
+          {{#link-to "stories" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
+        </div>
+      </div>
+  </div>
+</div>
