@@ -20,7 +20,7 @@ function config($stateProvider, $urlRouterProvider) {
   .state('stories', {
     url: '/stories',
     templateUrl: '../partials/stories/stories.html',
-    controller: 'StoriesController',
+    controller: 'StoryController',
     controllerAs: 'vm',
   })
   .state('story/:id', {

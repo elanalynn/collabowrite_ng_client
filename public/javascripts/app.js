@@ -2,4 +2,5 @@ angular
   .module('collabowrite', ['ui.router', 'ngAnimate'])
   .config(config)
   .controller('MainController', MainController)
-  // .factory('storyService', storyService)
+  .controller('StoryController', StoryController)
+  .factory('storyService', storyService)
