@@ -122,5 +122,25 @@ footer {
 
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  height: 80px;
-  background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #46B6AC; }
+  background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630; }
+
+.cw-card-large {
+  width: 100%;
+  margin: 0;
+  background: #fff; }
+
+.story-summary {
+  line-height: normal;
+  margin-top: -30px;
+  font-size: .9em; }
+  .story-summary .title {
+    color: #36535d;
+    font-variant: small-caps;
+    font-size: .8em; }
+
+.genre {
+  font-variant: small-caps; }
+  .genre .title {
+    color: #36535d;
+    font-variant: small-caps;
+    font-size: .8em; }

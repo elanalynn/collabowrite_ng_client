@@ -7,12 +7,12 @@
         <h2 class="mdl-card__title-text">{{story.title}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        <p>{{story.first_name}}  {{story.last_name}}</p>
-        <p>{{story.genre}} </p>
-        <p class="story-summary">{{story.summary}}</p>
+        <p class="genre">Genre: {{story.genre}} </p>
+        <p class="story-summary"><span class="title"> Starting Point: </span>{{story.summary}}</p>
+        <p class="blurb">blurb</p>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <a ui-sref="story({id: story.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Read More
         </a>
       </div>

@@ -164,9 +164,40 @@ footer {
   width: 320px;
   height: 320px;
 }
+
 .demo-card-square > .mdl-card__title {
   color: #fff;
-	height: 80px;
   background:
-    url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #46B6AC;
+    url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630;
+}
+
+.cw-card-large {
+	width: 100%;
+	margin: 0;
+	background: #fff;
+}
+
+
+// utility styles
+
+.story-summary {
+	line-height: normal;
+	margin-top: -30px;
+	font-size: .9em;
+
+	.title {
+		color: rgb(54, 83, 93);
+		font-variant: small-caps;
+		font-size: .8em;
+	}
+}
+
+.genre {
+	font-variant: small-caps;
+
+	.title {
+		color: rgb(54, 83, 93);
+		font-variant: small-caps;
+		font-size: .8em;
+	}
 }

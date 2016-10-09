@@ -23,22 +23,22 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'StoryController',
     controllerAs: 'vm',
   })
-  .state('story/:id', {
-    url: '/stories',
+  .state('story', {
+    url: '/stories/:id',
     templateUrl: '../partials/stories/story.html',
-    controller: 'StoriesController',
+    controller: 'StoryController',
     controllerAs: 'vm',
   })
   .state('stories.new', {
     url: '/new',
     templateUrl: '../partials/stories/new.html',
-    controller: 'StoriesController',
+    controller: 'StoryController',
     controllerAs: 'vm',
   })
   .state('stories.edit', {
     url: '/stories/:id/edit',
     templateUrl: '../partials/stories/edit.html',
-    controller: 'StoriesController',
+    controller: 'StoryController',
     controllerAs: 'vm',
   })
   .state('users', {
