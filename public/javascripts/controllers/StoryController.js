@@ -1,8 +1,9 @@
 function StoryController(storyService) {
   var vm = this
   storyService.getStories().then(stories => {
-    vm.stories = stories
-    console.log(vm.stories)
+    console.log(stories.data.data)
+    vm.stories = stories.data.data
+    return vm.stories
   })
 
 }

@@ -1,7 +1,7 @@
 function storyService($http){
   let service = {}
-  service.getStories = () => {
-    return $http.get('https://cw-api.herokuapp.com/api/v1')
+  service.getStories = function() {
+    return $http.get('http://localhost:3000/api/v1/stories')
   }
   return service
 }
