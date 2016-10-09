@@ -110,3 +110,17 @@ footer {
     .features .feature p {
       text-align: center;
       font-size: .8em; }
+
+.cw-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px; }
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  height: 80px;
+  background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #46B6AC; }
