@@ -23,19 +23,19 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'StoryController',
     controllerAs: 'vm',
   })
-  .state('story', {
+  .state('stories.new', {
+    url: '/stories/new',
+    templateUrl: '../partials/stories/new.html',
+    controller: 'StoryController',
+    controllerAs: 'vm',
+  })
+  .state('story_detail', {
     url: '/stories/:id',
     templateUrl: '../partials/stories/story.html',
     controller: 'StoryController',
     controllerAs: 'vm',
   })
-  .state('stories.new', {
-    url: '/new',
-    templateUrl: '../partials/stories/new.html',
-    controller: 'StoryController',
-    controllerAs: 'vm',
-  })
-  .state('stories.edit', {
+  .state('story_edit', {
     url: '/stories/:id/edit',
     templateUrl: '../partials/stories/edit.html',
     controller: 'StoryController',
@@ -44,7 +44,7 @@ function config($stateProvider, $urlRouterProvider) {
   .state('users', {
     url: '/users',
     templateUrl: '../partials/users/users.html',
-    controller: 'UsersController',
+    controller: 'UserController',
     controllerAs: 'vm',
   })
 }

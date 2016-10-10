@@ -1,0 +1,17 @@
+{
+  "name": "portfolio_v02",
+  "description": "personal portfolio",
+  "main": "app.js",
+  "authors": [
+    "Elana Kopelevich"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/elanalynn/collabowrite_ng_client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -3,4 +3,6 @@ angular
   .config(config)
   .controller('MainController', MainController)
   .controller('StoryController', StoryController)
+  .controller('UserController', UserController)
   .factory('storyService', storyService)
+  .factory('userService', userService)

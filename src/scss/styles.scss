@@ -28,6 +28,11 @@ a {
 	text-decoration: none;
 }
 
+form {
+	display: flex;
+	flex-direction: column;
+}
+
 footer {
 	display: flex;
 	align-items: center;
@@ -174,6 +179,7 @@ footer {
 .cw-card-large {
 	width: 100%;
 	margin: 0;
+	padding: 40px;
 	background: #fff;
 }
 
@@ -200,4 +206,12 @@ footer {
 		font-variant: small-caps;
 		font-size: .8em;
 	}
+}
+
+.editing-label {
+	color: rgb(54, 83, 93);
+}
+
+.cw-form-button {
+	margin-top: 20px;
 }

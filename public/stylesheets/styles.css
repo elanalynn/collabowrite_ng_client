@@ -23,6 +23,10 @@ p {
 a {
   text-decoration: none; }
 
+form {
+  display: flex;
+  flex-direction: column; }
+
 footer {
   display: flex;
   align-items: center;
@@ -127,6 +131,7 @@ footer {
 .cw-card-large {
   width: 100%;
   margin: 0;
+  padding: 40px;
   background: #fff; }
 
 .story-summary {
@@ -144,3 +149,9 @@ footer {
     color: #36535d;
     font-variant: small-caps;
     font-size: .8em; }
+
+.editing-label {
+  color: #36535d; }
+
+.cw-form-button {
+  margin-top: 20px; }
