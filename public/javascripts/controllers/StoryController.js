@@ -1,7 +1,7 @@
 function StoryController($stateParams, storyService) {
   var vm = this
 
-  vm.id = $stateParams.id
+  vm.id = $stateParams.storyId
 
   storyService.getStories().then(stories => {
     vm.stories = stories.data.data
