@@ -5,12 +5,6 @@ function config($stateProvider, $urlRouterProvider) {
     url: '/',
     templateUrl: '../partials/home.html',
   })
-  .state('login', {
-    url: '/login',
-    templateUrl: '../partials/login/login.html',
-    controller: 'LoginController',
-    controllerAs: 'vm',
-  })
   .state('dashboard', {
     url: '/dashboard',
     templateUrl: '../partials/dashboard/dashboard.html',

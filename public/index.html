@@ -25,7 +25,7 @@
             <a ui-sref-active="active" href="#howitworks">How it Works</a>
             <a ui-sref-active="active" ui-sref="stories">Browse</a>
             <a ui-sref-active="active" ui-sref="dashboard">Dashboard</a>
-            <a ui-sref-active="active" ui-sref="login">Login</a>
+            <a ui-sref-active="active" href="http://localhost:3000/auth/twitter">Login</a>
           </nav>
         </div>
       </header>
@@ -34,7 +34,7 @@
           <a ui-sref-active="active" class="mdl-navigation__link" href="#howitworks">How it Works</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="stories">Browse</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard">Dashboard</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="login">Login</a>
+          <a ui-sref-active="active" class="mdl-navigation__link" ng-click="vm.login()">Login</a>
         </nav>
       </div>
       <main ui-view></main>

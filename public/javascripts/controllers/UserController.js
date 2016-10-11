@@ -1,4 +1,4 @@
 function UserController($state, $stateParams, userService) {
-  var vm = this
+  const vm = this
   console.log(vm, userService)
 }

@@ -1,5 +1,5 @@
 function StoryController($stateParams, storyService) {
-  var vm = this
+  const vm = this
 
   vm.id = $stateParams.storyId
 

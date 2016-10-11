@@ -1,4 +1,4 @@
 function MainController() {
-  var vm = this
-  vm.thing = 'blarg'
+  const vm = this
+
 }
