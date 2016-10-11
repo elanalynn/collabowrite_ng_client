@@ -4,5 +4,7 @@ angular
   .controller('MainController', MainController)
   .controller('StoryController', StoryController)
   .controller('UserController', UserController)
+  .controller('DashboardController', DashboardController)
   .factory('storyService', storyService)
   .factory('userService', userService)
+  .factory('dashboardService', dashboardService)
