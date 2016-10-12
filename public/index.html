@@ -22,12 +22,14 @@
         <div class="mdl-layout__header-row cw-navigation-row mdl-layout--large-screen-only">
           <a ui-sref="home"><img class="collabowrite-logo" src="/assets/main/cw-logo-nav.png" alt="CollaboWrite" /></a>
           <nav class="cw-navigation"  ng-switch="vm.user">
-            <a ng-switch-when="vm.user" ui-sref-active="active" href="/#/#about">About</a>
+            <a ui-sref-active="active" href="/#/#about">About</a>
             <a ui-sref-active="active" href="/#/#howitworks">How it Works</a>
             <a ui-sref-active="active" href="/#/#guidelines">Guidelines</a>
             <a ui-sref-active="active" ui-sref="stories">Browse</a>
-            <a ui-sref-active="active" ui-sref="dashboard">Dashboard</a>
-            <a ui-sref-active="active" href="http://localhost:3000/auth/twitter">Login</a>
+            <a ng-switch-when="vm.user" ui-sref-active="active" ui-sref="dashboard">Dashboard</a>
+            <a ui-sref-active="active" href="http://localhost:3000/api/v1/auth/twitter">Login</a>
+            <!-- ng-switch-when="!vm.user" -->
+            <a ng-switch-when="vm.user" ui-sref-active="active" href="http://localhost:3000/logout">Logout</a>
           </nav>
         </div>
       </header>
