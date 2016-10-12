@@ -5,6 +5,6 @@ function MainController(userService) {
   .then(user => {
     if (!user) vm.user = false
     else vm.user = user.data.user
-    console.log('vm.user', vm.user)
+    // console.log('vm.user', vm.user)
   })
 }
