@@ -53,7 +53,7 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'StoryController',
     controllerAs: 'vm',
   })
-  .state('stories.new', {
+  .state('story_new', {
     url: '/stories/new',
     templateUrl: '../partials/stories/new.html',
     controller: 'StoryController',

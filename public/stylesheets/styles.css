@@ -141,6 +141,10 @@ footer {
   .cw-dash-navigation-row a {
     text-transform: uppercase; }
 
+.cw-dashboard-header {
+  display: flex;
+  justify-content: space-between; }
+
 .story-summary {
   line-height: normal;
   margin-top: -30px;

@@ -6,17 +6,17 @@
         <p>Have you read the <a href="index.html#guidelines" target="_blank">community guidelines</a>?</p>
         <form>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="title" placeholder="Name your story." pattern="" ng-model={{story.title}}>
+            <input class="mdl-textfield__input" type="text" name="title" placeholder="Name your vm.story." pattern="" ng-model={{vm.story.title}}>
             <label class="mdl-textfield__label" for="title">Title</label>
             <span class="mdl-textfield__error">Input is not correct!</span>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="summary" placeholder="Just a sentence. Update this at any time." pattern="" ng-model={{story.summary}}>
+            <input class="mdl-textfield__input" type="text" name="summary" placeholder="Just a sentence. Update this at any time." pattern="" ng-model={{vm.story.summary}}>
             <label class="mdl-textfield__label" for="summary">Summary</label>
             <span class="mdl-textfield__error">Input is not correct!</span>
           </div>
           <label for="genre">Genre</label>
-          <select class="" ng-model={{story.genre}}>
+          <select class="" ng-model={{vm.story.genre}}>
             <option>Let's see what happens!</option>
             <option>Children's</option>
             <option>Comedy</option>
