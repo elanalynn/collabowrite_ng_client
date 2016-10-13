@@ -145,6 +145,9 @@ footer {
   display: flex;
   justify-content: space-between; }
 
+.cw-dash-content-wrapper {
+  margin: 30px; }
+
 .story-summary {
   line-height: normal;
   margin-top: -30px;
@@ -166,3 +169,6 @@ footer {
 
 .cw-form-button {
   margin-top: 20px; }
+
+.cw-circle {
+  border-radius: 50%; }

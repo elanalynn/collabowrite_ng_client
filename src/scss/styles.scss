@@ -200,6 +200,10 @@ footer {
 	justify-content: space-between;
 }
 
+.cw-dash-content-wrapper {
+	margin: 30px;
+}
+
 // utility styles
 
 .story-summary {
@@ -230,4 +234,8 @@ footer {
 
 .cw-form-button {
 	margin-top: 20px;
+}
+
+.cw-circle {
+		border-radius: 50%;
 }
