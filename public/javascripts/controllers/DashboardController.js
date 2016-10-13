@@ -6,7 +6,7 @@ function DashboardController(userService, dashboardService) {
     else return user.data.user
   })
   .then(user => {
-    dashboardService.getUser(user.id)
+    userService.findOrCreate(user)
     .then(user => {
       vm.user = user.data
       return user.data.id

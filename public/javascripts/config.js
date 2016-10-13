@@ -12,37 +12,37 @@ function config($stateProvider, $urlRouterProvider) {
     controllerAs: 'vm',
   })
   .state('dashboard.profile', {
-    url: '/dashboard/profile',
+    url: '/profile',
     templateUrl: '../partials/dashboard/profile.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
   .state('dashboard.settings', {
-    url: '/dashboard/settings',
+    url: '/settings',
     templateUrl: '../partials/dashboard/settings.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
   .state('dashboard.stories', {
-    url: '/dashboard/stories',
+    url: '/stories',
     templateUrl: '../partials/dashboard/stories.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
   .state('dashboard.chapters', {
-    url: '/dashboard/chapters',
+    url: '/chapters',
     templateUrl: '../partials/dashboard/chapters.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
   .state('dashboard.favorites', {
-    url: '/dashboard/favorites',
+    url: '/favorites',
     templateUrl: '../partials/dashboard/favorites.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
   .state('dashboard.pending', {
-    url: '/dashboard/pending',
+    url: '/pending',
     templateUrl: '../partials/dashboard/pending.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
