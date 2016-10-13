@@ -160,8 +160,8 @@ footer {
 // container and other general layout
 
 .cw-container {
-	width: 80%;
-	max-width: 1200px;
+	width: 1200px;
+	max-width: 80%;
 	margin: 0 auto;
 }
 
@@ -177,7 +177,7 @@ footer {
 }
 
 .cw-card-large {
-	width: 100%;
+	max-width: 100%;
 	margin: 0;
 	padding: 40px;
 	background: #fff;
@@ -234,6 +234,7 @@ footer {
 
 .cw-form-button {
 	margin-top: 20px;
+	align-self: flex-end;
 }
 
 .cw-circle {

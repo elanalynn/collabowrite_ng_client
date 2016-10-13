@@ -1,4 +1,9 @@
-function UserController($state, $stateParams, userService) {
+function UserController(userService) {
   const vm = this
-  console.log(vm, userService)
+
+  userService.getLoggedInUser()
+  .then(user => {
+    vm.user = user
+    console.log(vm.user)
+  })
 }

@@ -116,8 +116,8 @@ footer {
       font-size: .8em; }
 
 .cw-container {
-  width: 80%;
-  max-width: 1200px;
+  width: 1200px;
+  max-width: 80%;
   margin: 0 auto; }
 
 .demo-card-square.mdl-card {
@@ -129,7 +129,7 @@ footer {
   background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630; }
 
 .cw-card-large {
-  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 40px;
   background: #fff; }
@@ -168,7 +168,8 @@ footer {
   color: #36535d; }
 
 .cw-form-button {
-  margin-top: 20px; }
+  margin-top: 20px;
+  align-self: flex-end; }
 
 .cw-circle {
   border-radius: 50%; }

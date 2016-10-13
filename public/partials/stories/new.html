@@ -3,35 +3,38 @@
     <div class="mdl-cell mdl-cell--12-col">
       <div class="cw-card-large mdl-shadow--2dp">
         <h1>Start a New Story</h1>
-        <p>Have you read the <a href="index.html#guidelines" target="_blank">community guidelines</a>?</p>
-        <form>
+        <p>Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
+        <form ng-submit="vm.createStory(vm.story)">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="title" placeholder="Name your vm.story." pattern="" ng-model={{vm.story.title}}>
-            <label class="mdl-textfield__label" for="title">Title</label>
-            <span class="mdl-textfield__error">Input is not correct!</span>
+            <input class="mdl-textfield__input" hidden ng-model="vm.story.user_id">
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="summary" placeholder="Just a sentence. Update this at any time." pattern="" ng-model={{vm.story.summary}}>
+            <input class="mdl-textfield__input" type="text" placeholder="Name your story!"  ng-model="vm.story.title">
+            <label class="mdl-textfield__label" for="title">Title</label>
+            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" placeholder="Just a sentence. Update this at any time." ng-model="vm.story.summary">
             <label class="mdl-textfield__label" for="summary">Summary</label>
-            <span class="mdl-textfield__error">Input is not correct!</span>
+            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
           </div>
           <label for="genre">Genre</label>
-          <select class="" ng-model={{vm.story.genre}}>
-            <option>Let's see what happens!</option>
-            <option>Children's</option>
-            <option>Comedy</option>
-            <option>Drama</option>
-            <option>Fantasy</option>
-            <option>Historical Fiction</option>
-            <option>Horror</option>
-            <option>Mystery</option>
-            <option>Romance</option>
-            <option>Satire</option>
-            <option>Tragedy</option>
-          </select>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-            Get Started
-          </button>
+          <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+            <select class="mdl-selectfield__select" ng-model="vm.story.genre_id">
+              <option selected value="1">Let's see what happens!</option>
+              <option value="2">Children's</option>
+              <option value="3">Comedy</option>
+              <option value="4">Drama</option>
+              <option value="5">Fantasy</option>
+              <option value="6">Historical Fiction</option>
+              <option value="7">Horror</option>
+              <option value="8">Mystery</option>
+              <option value="9">Romance</option>
+              <option value="10">Satire</option>
+              <option value="11">Tragedy</option>
+            </select>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">Get Started</button>
         </form>
       </div>
     </div>
