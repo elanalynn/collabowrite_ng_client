@@ -11,6 +11,42 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
+  .state('dashboard.profile', {
+    url: '/dashboard/profile',
+    templateUrl: '../partials/dashboard/profile.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
+  .state('dashboard.settings', {
+    url: '/dashboard/settings',
+    templateUrl: '../partials/dashboard/settings.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
+  .state('dashboard.stories', {
+    url: '/dashboard/stories',
+    templateUrl: '../partials/dashboard/stories.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
+  .state('dashboard.chapters', {
+    url: '/dashboard/chapters',
+    templateUrl: '../partials/dashboard/chapters.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
+  .state('dashboard.favorites', {
+    url: '/dashboard/favorites',
+    templateUrl: '../partials/dashboard/favorites.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
+  .state('dashboard.pending', {
+    url: '/dashboard/pending',
+    templateUrl: '../partials/dashboard/pending.html',
+    controller: 'DashboardController',
+    controllerAs: 'vm',
+  })
   .state('stories', {
     url: '/stories',
     templateUrl: '../partials/stories/stories.html',

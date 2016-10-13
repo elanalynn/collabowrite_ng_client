@@ -7,14 +7,14 @@
       </div>
       <div class="mdl-card__supporting-text">
         <nav class="cw-dash-navigation-row">
-          <a class="mdl-navigation__link">Profile</a>
-          <a class="mdl-navigation__link">Settings</a>
-          <a class="mdl-navigation__link">My Stories</a>
-          <a class="mdl-navigation__link">My Contributions</a>
-          <a class="mdl-navigation__link">My Favorites</a>
-          <a class="mdl-navigation__link">Pending Approval</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.profile">Profile</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.settings">Settings</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.stories">My Stories</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.chapters">My Chapters</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.favorites">My Favorites</a>
+          <a class="mdl-navigation__link" ui-sref="dashboard.pending">Pending Approval</a>
         </nav>
-        <section ui-view="dashboard"></section>
+        <section ui-view></section>
       </div>
     </div>
   </div>

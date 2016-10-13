@@ -26,7 +26,7 @@
             <a ui-sref-active="active" href="/#/#howitworks">How it Works</a>
             <a ui-sref-active="active" href="/#/#guidelines">Guidelines</a>
             <a ui-sref-active="active" ui-sref="stories">Browse</a>
-            <a ng-show="vm.user" ui-sref-active="active" ui-sref="dashboard">Dashboard</a>
+            <a ng-show="vm.user" ui-sref-active="active" ui-sref="dashboard.profile">Dashboard</a>
             <a ng-show="!vm.user" ui-sref-active="active" href="http://localhost:3000/api/v1/auth/twitter">Login</a>
             <a ng-show="vm.user" ui-sref-active="active" href="http://localhost:3000/api/v1/auth/logout">Logout</a>
           </nav>
