@@ -6,18 +6,15 @@
         <h2 class="mdl-card__title-text">Hello {{vm.user.first_name}} {{vm.user.last_name}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        <ul>
-          <li>My Profile</li>
-          <li>My Stories</li>
-          <li>My Contributions</li>
-          <li>Pending Approvals</li>
-          <li>Favorites</li>
-        </ul>
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a ui-sref="story_edit({id: vm.story.storyId})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Contribute
-        </a>
+        <nav class="cw-dash-navigation-row">
+          <a class="mdl-navigation__link">Profile</a>
+          <a class="mdl-navigation__link">Settings</a>
+          <a class="mdl-navigation__link">My Stories</a>
+          <a class="mdl-navigation__link">My Contributions</a>
+          <a class="mdl-navigation__link">My Favorites</a>
+          <a class="mdl-navigation__link">Pending Approval</a>
+        </nav>
+        <section ui-view="dashboard"></section>
       </div>
     </div>
   </div>

@@ -134,6 +134,13 @@ footer {
   padding: 40px;
   background: #fff; }
 
+.cw-dash-navigation-row {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; }
+  .cw-dash-navigation-row a {
+    text-transform: uppercase; }
+
 .story-summary {
   line-height: normal;
   margin-top: -30px;

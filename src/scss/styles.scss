@@ -183,6 +183,17 @@ footer {
 	background: #fff;
 }
 
+//dashboard
+
+.cw-dash-navigation-row {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+
+	a {
+		text-transform: uppercase;
+	}
+}
 
 // utility styles
 

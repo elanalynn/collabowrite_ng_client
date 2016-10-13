@@ -1,30 +1,28 @@
 function DashboardController(userService, dashboardService) {
   var vm = this
-
   userService.getLoggedInUser()
   .then(user => {
     if (!user) return null
     else return user.data.user
-    // console.log('vm.user', vm.user)
-  }).then(user => {
-    // `http://localhost:3000/api/v1/users/${id}`
-    console.log(user.id)
+  })
+  .then(user => {
     dashboardService.getUser(user.id)
     .then(user => {
-      console.log('second user', user)
       vm.user = user.data
+      return user.data.id
+    })
+    .then(id => {
+      dashboardService.getUserStories(id)
+      .then(stories => {
+        vm.stories = stories.data
+        return vm.stories.map(story => story.id)
+      })
+      .then(storyIds => {
+        storyIds.map(id => dashboardService.getChapters(id)
+        .then(chapters => {
+          vm.chapters = {id: chapters.data}
+        }))
+      })
     })
   })
-
-
-
-  // $http.get(`http://localhost:3000/api/v1/${id}/stories`
-  // dashboardService.getUserStories = function(id) {
-  //
-  // }
-
-  // `http://localhost:3000/api/v1/users/${user_id}/stories/${story_id}`
-  // dashboardService.getChapters = function(user_id, story_id) {
-  //
-  // }
 }
