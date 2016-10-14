@@ -177,9 +177,9 @@ footer {
 	margin: 0 auto;
 }
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
+.cw-card {
+	width: 300px;
+  max-width: 100%;
 }
 
 .demo-card-square > .mdl-card__title {
