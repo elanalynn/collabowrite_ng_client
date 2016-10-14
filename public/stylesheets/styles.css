@@ -6,7 +6,7 @@ html, body {
   background: url(/assets/main/notebook.png) repeat; }
 
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   margin-bottom: -30px; }
 
 h1, h2, h3 {
