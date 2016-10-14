@@ -33,8 +33,7 @@
                 <img ng-src="{{vm.user.avatar}}" class="cw-circle-small" alt="avatar" />
               </button>
               <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect cw-user-menu" for="demo-menu-lower-right">
-                <a class="mdl-menu__item" ui-sref="dashboard.profile"><span>Dashboard</span></a>
-                <a class="mdl-menu__item" ui-sref="dashboard.settings"><span>Settings</span></a>
+                <a class="mdl-menu__item" ui-sref="dashboard.profile({id: vm.user.id})"><span>Dashboard</span></a>
                 <a class="mdl-menu__item" href="http://localhost:3000/api/v1/auth/logout"><span>Logout</span></a>
               </div>
             </a>

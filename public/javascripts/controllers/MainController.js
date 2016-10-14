@@ -8,8 +8,6 @@ function MainController(userService) {
   })
   .then(user => {
     userService.findOrCreate(user)
-    .then(user => {
-      vm.user = user.data
-    })
+    .then(user => vm.user = user.data)
   })
 }

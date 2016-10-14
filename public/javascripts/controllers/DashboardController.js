@@ -1,6 +1,6 @@
 function DashboardController(userService, dashboardService) {
   var vm = this
-  
+
   userService.getLoggedInUser()
   .then(user => {
     if (!user) return null

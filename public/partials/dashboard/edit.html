@@ -1,7 +1,7 @@
 <div class="cw-dash-content-wrapper">
   <section class="cw-settings-header">
     <h3 class="mdl-cell-col-12">Edit Profile</h3>
-    <button ui-sref="dashboard.profile" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+    <button ng-click="vm.updateUser(vm.user.id, vm.user)" ui-sref="dashboard.profile" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
       <i class="material-icons">lock_open</i>
     </button>
   </section>
@@ -36,13 +36,13 @@
       <label class="mdl-textfield__label">Email:</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="text" ng-model="{{vm.user.avatar}}">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.avatar">
       <label class="mdl-textfield__label">Avatar:</label>
       </div>
     </form>
     <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
   </section>
   <section class="cw-settings-footer">
-    <button class="mdl-button mdl-js-button mdl-button--raised">Deactivate Account</button>
+    <a ng-click="vm.deactivateUser(vm.user.id)" class="mdl-button mdl-js-button mdl-button--raised">Deactivate Account</a>
   </section>
 </div>

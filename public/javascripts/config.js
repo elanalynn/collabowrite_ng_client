@@ -6,7 +6,7 @@ function config($stateProvider, $urlRouterProvider) {
     templateUrl: '../partials/home.html',
   })
   .state('dashboard', {
-    url: '/dashboard',
+    url: '/users/:id/dashboard',
     templateUrl: '../partials/dashboard/dashboard.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
