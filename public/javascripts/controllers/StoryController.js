@@ -3,6 +3,7 @@ function StoryController($stateParams, $location, userService,  storyService) {
 
   vm.id = $stateParams.storyId
   storyService.getStory(vm.id).then(story => vm.story = story.data)
+  storyService.getStories().then(stories => vm.stories = stories.data.data)
   userService.getLoggedInUser().then(user => vm.user = user)
 
   vm.story = {}
@@ -16,15 +17,4 @@ function StoryController($stateParams, $location, userService,  storyService) {
         $location.url(`/stories/${id}`)
       }))
   }
-
-  vm.createStories = () => {
-    storyService.getStories().then(stories => {
-      vm.stories = stories.data.data
-      return vm.stories
-    })
-  }
-
-
-
-
 }
