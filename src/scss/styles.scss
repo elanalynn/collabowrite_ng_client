@@ -107,11 +107,6 @@ footer {
 		span {
 			color: rgba(134, 134, 134, 0.8);
 		}
-
-		a:hover {
-			color: rgb(255, 255, 255);
-			background-color: rgba(134, 134, 134, 0.8);
-		}
 	}
 }
 
@@ -216,6 +211,30 @@ footer {
 	margin: 30px;
 }
 
+.cw-settings-header, .cw-settings-header, .cw-settings-body {
+	width: 100%;
+	padding: 10px 30px 0 30px;
+	display: flex;
+
+	h3 {
+		text-align: left;
+		width: 80%;
+	}
+
+	button {
+		align-self: flex-end;
+	}
+}
+
+// .cw-settings-body {
+// 	display: flex;
+// }
+
+.cw-settings-list {
+	list-style: none;
+}
+
+
 // utility styles
 
 .story-summary {
@@ -249,10 +268,12 @@ footer {
 	align-self: flex-end;
 }
 
-.cw-circle, .cw-circle-small {
-		border-radius: 50%;
+.cw-circle {
+	border-radius: 50%;
+	align-self: flex-end;
 }
 
 .cw-circle-small {
+	border-radius: 50%;
 	width: 100%;
 }

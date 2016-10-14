@@ -74,9 +74,6 @@ footer {
       margin-bottom: 3px; }
   .cw-header .cw-user-menu span {
     color: rgba(134, 134, 134, 0.8); }
-  .cw-header .cw-user-menu a:hover {
-    color: white;
-    background-color: rgba(134, 134, 134, 0.8); }
 
 #intro, #about, #howitworks, #guidelines {
   max-width: 80%;
@@ -153,6 +150,19 @@ footer {
 .cw-dash-content-wrapper {
   margin: 30px; }
 
+.cw-settings-header, .cw-settings-header, .cw-settings-body {
+  width: 100%;
+  padding: 10px 30px 0 30px;
+  display: flex; }
+  .cw-settings-header h3, .cw-settings-header h3, .cw-settings-body h3 {
+    text-align: left;
+    width: 80%; }
+  .cw-settings-header button, .cw-settings-header button, .cw-settings-body button {
+    align-self: flex-end; }
+
+.cw-settings-list {
+  list-style: none; }
+
 .story-summary {
   line-height: normal;
   margin-top: -30px;
@@ -176,8 +186,10 @@ footer {
   margin-top: 20px;
   align-self: flex-end; }
 
-.cw-circle, .cw-circle-small {
-  border-radius: 50%; }
+.cw-circle {
+  border-radius: 50%;
+  align-self: flex-end; }
 
 .cw-circle-small {
+  border-radius: 50%;
   width: 100%; }

@@ -17,9 +17,9 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'DashboardController',
     controllerAs: 'vm',
   })
-  .state('dashboard.settings', {
-    url: '/settings',
-    templateUrl: '../partials/dashboard/settings.html',
+  .state('dashboard.edit', {
+    url: '/profile/edit',
+    templateUrl: '../partials/dashboard/edit.html',
     controller: 'DashboardController',
     controllerAs: 'vm',
   })

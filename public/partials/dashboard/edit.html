@@ -1,0 +1,48 @@
+<div class="cw-dash-content-wrapper">
+  <section class="cw-settings-header">
+    <h3 class="mdl-cell-col-12">Edit Profile</h3>
+    <button ui-sref="dashboard.profile" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+      <i class="material-icons">lock_open</i>
+    </button>
+  </section>
+  <section class="cw-settings-body">
+    <form class="" action="index.html" method="post">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.first_name">
+      <label class="mdl-textfield__label">First Name:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.last_name">
+      <label class="mdl-textfield__label">Last Name:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.handle">
+      <label class="mdl-textfield__label">Handle:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.location">
+      <label class="mdl-textfield__label">Location:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.created_at">
+      <label class="mdl-textfield__label">CollaboWriter Since:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.bio">
+      <label class="mdl-textfield__label">Bio:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="vm.user.email">
+      <label class="mdl-textfield__label">Email:</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" ng-model="{{vm.user.avatar}}">
+      <label class="mdl-textfield__label">Avatar:</label>
+      </div>
+    </form>
+    <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
+  </section>
+  <section class="cw-settings-footer">
+    <button class="mdl-button mdl-js-button mdl-button--raised">Deactivate Account</button>
+  </section>
+</div>
