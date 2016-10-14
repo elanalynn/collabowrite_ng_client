@@ -2,18 +2,19 @@ function StoryController($stateParams, $location, userService,  storyService) {
   const vm = this
 
   vm.id = $stateParams.storyId
-  vm.story = storyService.getStory(vm.id).then(story => vm.story = story.data)
+  storyService.getStory(vm.id).then(story => vm.story = story.data)
+  userService.getLoggedInUser().then(user => vm.user = user)
 
-  vm.story.user_id = userService.getLoggedInUser().then(user => {
-    vm.story.user_id = user.data.user.id
-  })
+  vm.story = {}
 
   vm.createStory = story => {
-    storyService.createStory(story)
-    .then(response => {
-      const id = response.data.id
-      $location.url(`/stories/${id}`)
-    })
+    userService.getLoggedInUser()
+    .then(user => vm.story.user_id = user.data.user.id)
+    .then(() => storyService.createStory(story)
+      .then(response => {
+        const id = response.data.id
+        $location.url(`/stories/${id}`)
+      }))
   }
 
   vm.createStories = () => {

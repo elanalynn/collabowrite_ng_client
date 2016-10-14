@@ -23,19 +23,25 @@
           <a ui-sref="home"><img class="collabowrite-logo" src="/assets/main/cw-logo-nav.png" alt="CollaboWrite" /></a>
           <nav class="cw-navigation">
             <a ui-sref-active="active" href="/#/#about">About</a>
-            <a ui-sref-active="active" href="/#/#howitworks">How it Works</a>
             <a ui-sref-active="active" href="/#/#guidelines">Guidelines</a>
             <a ui-sref-active="active" ui-sref="stories">Browse</a>
-            <a ng-show="vm.user" ui-sref-active="active" ui-sref="dashboard.profile">Dashboard</a>
             <a ng-show="!vm.user" ui-sref-active="active" href="http://localhost:3000/api/v1/auth/twitter">Login</a>
-            <a ng-show="vm.user" ui-sref-active="active" href="http://localhost:3000/api/v1/auth/logout">Logout</a>
+            <a ng-show="vm.user">
+              <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                <img ng-src="{{vm.user.avatar}}" class="cw-circle-small" alt="avatar" />
+              </button>
+              <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect cw-user-menu" for="demo-menu-lower-right">
+                <a class="mdl-menu__item" ui-sref="dashboard.profile"><span>Dashboard</span></a>
+                <a class="mdl-menu__item" ui-sref="dashboard.settings"><span>Settings</span></a>
+                <a class="mdl-menu__item" href="http://localhost:3000/api/v1/auth/logout"><span>Logout</span></a>
+              </div>
+            </a>
           </nav>
         </div>
       </header>
       <div class="mdl-layout__drawer mdl-layout--small-screen-only">
         <nav class="mdl-navigation">
           <a ui-sref-active="active" class="mdl-navigation__link" href="/#/#about">About</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" href="/#/#howitworks">How it Works</a>
           <a ui-sref-active="active" class="mdl-navigation__link" href="/#/#guidelines">Guidelines</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="stories">Browse</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard">Dashboard</a>

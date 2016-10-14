@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   font-family: 'Lato', sans-serif;
   color: #333;
-  background: url(/assets/main/paper-4.jpg) repeat; }
+  background: url(/assets/main/notebook.png) repeat; }
 
 .wrapper {
   min-height: 100%;
@@ -72,6 +72,11 @@ footer {
       background-color: #bdbdbd;
       left: 15%;
       margin-bottom: 3px; }
+  .cw-header .cw-user-menu span {
+    color: rgba(134, 134, 134, 0.8); }
+  .cw-header .cw-user-menu a:hover {
+    color: white;
+    background-color: rgba(134, 134, 134, 0.8); }
 
 #intro, #about, #howitworks, #guidelines {
   max-width: 80%;
@@ -171,5 +176,8 @@ footer {
   margin-top: 20px;
   align-self: flex-end; }
 
-.cw-circle {
+.cw-circle, .cw-circle-small {
   border-radius: 50%; }
+
+.cw-circle-small {
+  width: 100%; }

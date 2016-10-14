@@ -3,7 +3,13 @@ function MainController(userService) {
 
   userService.getLoggedInUser()
   .then(user => {
-    if (!user) vm.user = false
-    else vm.user = user.data.user
+    if (!user) return null
+    else return user.data.user._json
+  })
+  .then(user => {
+    userService.findOrCreate(user)
+    .then(user => {
+      vm.user = user.data
+    })
   })
 }

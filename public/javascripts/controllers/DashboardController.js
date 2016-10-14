@@ -1,19 +1,15 @@
 function DashboardController(userService, dashboardService) {
   var vm = this
+  
   userService.getLoggedInUser()
   .then(user => {
     if (!user) return null
-    else {
-      // console.log('getLoggedInUser', user.data.user._json)
-      return user.data.user._json
-    }
+    else return user.data.user._json
   })
   .then(user => {
     userService.findOrCreate(user)
     .then(user => {
-      console.log('findOrCreate', user)
       vm.user = user.data
-      console.log('vm.user', vm.user)
       return user.data.id
     })
     .then(id => {
