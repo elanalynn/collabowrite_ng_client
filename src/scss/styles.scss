@@ -164,22 +164,12 @@ footer {
 	}
 }
 
-// Stories and other general layout
+// General layout
 
 .cw-container {
 	width: 1200px;
 	max-width: 80%;
 	margin: 0 auto;
-}
-
-.cw-card {
-	width: 300px;
-  max-width: 100%;
-}
-
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  // background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630;
 }
 
 .cw-card-large {
@@ -249,27 +239,42 @@ footer {
 
 // story styles
 
-.story-summary {
-	line-height: normal;
-	margin-top: -30px;
-	font-size: .9em;
+.cw-card {
+	width: 300px;
+  max-width: 100%;
+}
 
-	.title {
-		color: rgb(54, 83, 93);
-		font-variant: small-caps;
-		font-size: .8em;
-	}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
 }
 
 .genre {
 	font-variant: small-caps;
+	font-size: .85em;
 
 	.title {
-		color: rgb(54, 83, 93);
-		font-variant: small-caps;
-		font-size: .8em;
+		color: rgb(35, 85, 102);
 	}
 }
+
+.summary {
+	font-variant: small-caps;
+	margin-top: -30px;
+	font-size: .9em;
+
+	.title {
+		color: rgb(35, 85, 102);
+	}
+}
+
+.cw-last-contribution {
+	font-size: .95em;
+
+	.title {
+		color: rgb(35, 85, 102);
+	}
+}
+
 
 // Utilities
 

@@ -122,13 +122,6 @@ footer {
   max-width: 80%;
   margin: 0 auto; }
 
-.cw-card {
-  width: 300px;
-  max-width: 100%; }
-
-.demo-card-square > .mdl-card__title {
-  color: #fff; }
-
 .cw-card-large {
   max-width: 100%;
   margin: 0;
@@ -173,21 +166,30 @@ footer {
 .cw-settings-list {
   list-style: none; }
 
-.story-summary {
-  line-height: normal;
-  margin-top: -30px;
-  font-size: .9em; }
-  .story-summary .title {
-    color: #36535d;
-    font-variant: small-caps;
-    font-size: .8em; }
+.cw-card {
+  width: 300px;
+  max-width: 100%; }
+
+.demo-card-square > .mdl-card__title {
+  color: #fff; }
 
 .genre {
-  font-variant: small-caps; }
+  font-variant: small-caps;
+  font-size: .85em; }
   .genre .title {
-    color: #36535d;
-    font-variant: small-caps;
-    font-size: .8em; }
+    color: #235566; }
+
+.summary {
+  font-variant: small-caps;
+  margin-top: -30px;
+  font-size: .9em; }
+  .summary .title {
+    color: #235566; }
+
+.cw-last-contribution {
+  font-size: .95em; }
+  .cw-last-contribution .title {
+    color: #235566; }
 
 .cw-form-button {
   margin-top: 20px;
