@@ -136,28 +136,39 @@ footer {
   padding: 40px;
   background: #fff; }
 
-.cw-dash-navigation-row {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around; }
-  .cw-dash-navigation-row a {
-    text-transform: uppercase; }
-
 .cw-dashboard-header {
   display: flex;
   justify-content: space-between; }
 
-.cw-dash-content-wrapper {
-  margin: 30px; }
+.cw-dash-navigation-row {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between; }
+  .cw-dash-navigation-row a {
+    text-transform: uppercase;
+    text-align: right;
+    padding: 10px 20px; }
+  .cw-dash-navigation-row a:hover {
+    background-color: rgba(227, 238, 249, 0.3); }
+  .cw-dash-navigation-row .active {
+    background-color: rgba(227, 238, 249, 0.8); }
+  .cw-dash-navigation-row .first {
+    margin-left: 30px; }
 
-.cw-settings-header, .cw-settings-header, .cw-settings-body {
-  width: 100%;
+.cw-dash-content-wrapper {
+  padding: 0 30px;
+  border-radius: 3px;
+  margin: 0 auto; }
+
+.cw-settings-header, .cw-settings-footer, .cw-settings-body {
+  min-width: 100%;
   padding: 10px 30px 0 30px;
-  display: flex; }
-  .cw-settings-header h3, .cw-settings-header h3, .cw-settings-body h3 {
-    text-align: left;
-    width: 80%; }
-  .cw-settings-header button, .cw-settings-header button, .cw-settings-body button {
+  display: flex;
+  background-color: rgba(227, 238, 249, 0.8);
+  min-height: 60px; }
+  .cw-settings-header h3, .cw-settings-footer h3, .cw-settings-body h3 {
+    text-align: left; }
+  .cw-settings-header button, .cw-settings-footer button, .cw-settings-body button {
     align-self: flex-end; }
 
 .cw-settings-list {

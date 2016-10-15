@@ -1,5 +1,9 @@
-function DashboardController(userService, dashboardService) {
+function DashboardController($state, userService, dashboardService) {
   var vm = this
+
+  vm.getState = path => {
+    if (path === $state.current.url) return {active: true}
+  }
 
   userService.getLoggedInUser()
   .then(user => {
@@ -13,9 +17,12 @@ function DashboardController(userService, dashboardService) {
       return user.data.id
     })
     .then(id => {
+      console.log(id)
       dashboardService.getUserStories(id)
       .then(stories => {
-        vm.stories = stories.data
+        console.log(stories)
+        vm.stories = stories.data.data
+        console.log(vm.stories)
         return vm.stories.map(story => story.id)
       })
       .then(storyIds => {

@@ -8,11 +8,11 @@
       </div>
       <div class="mdl-card__supporting-text">
         <nav class="cw-dash-navigation-row">
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard.profile">Profile</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard.stories">Stories</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard.chapters">Chapters</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard.favorites">Favorites</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="dashboard.pending">Pending</a>
+          <a ng-class="vm.getState('/profile')" class="first mdl-navigation__link" ui-sref="dashboard.profile">Profile</a>
+          <a ng-class="vm.getState('/stories')" class="mdl-navigation__link" ui-sref="dashboard.stories">Stories</a>
+          <a ng-class="vm.getState('/chapters')" class="mdl-navigation__link" ui-sref="dashboard.chapters">Chapters</a>
+          <a ng-class="vm.getState('/favorites')" class="mdl-navigation__link" ui-sref="dashboard.favorites">Favorites</a>
+          <a ng-class="vm.getState('/pending')" class="mdl-navigation__link" ui-sref="dashboard.pending">Pending</a>
         </nav>
         <section ui-view></section>
       </div>
