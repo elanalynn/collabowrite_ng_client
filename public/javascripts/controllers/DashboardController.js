@@ -17,12 +17,9 @@ function DashboardController($state, userService, dashboardService) {
       return user.data.id
     })
     .then(id => {
-      console.log(id)
       dashboardService.getUserStories(id)
       .then(stories => {
-        console.log(stories)
         vm.stories = stories.data.data
-        console.log(vm.stories)
         return vm.stories.map(story => story.id)
       })
       .then(storyIds => {
