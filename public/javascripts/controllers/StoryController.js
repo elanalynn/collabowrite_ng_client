@@ -5,7 +5,11 @@ function StoryController($stateParams, $location, userService,  storyService) {
     storyService.getStory($stateParams.id).then(story => vm.story = story.data)
   }
 
-  storyService.getStories().then(stories => vm.stories = stories.data.data)
+  storyService.getStories().then(stories => {
+    vm.stories = stories.data.data
+    console.log(vm.stories)
+  })
+  
   userService.getLoggedInUser().then(user => vm.user = user)
 
   vm.createStory = story => {

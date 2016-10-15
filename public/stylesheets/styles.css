@@ -127,8 +127,7 @@ footer {
   max-width: 100%; }
 
 .demo-card-square > .mdl-card__title {
-  color: #fff;
-  background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630; }
+  color: #fff; }
 
 .cw-card-large {
   max-width: 100%;
@@ -189,9 +188,6 @@ footer {
     color: #36535d;
     font-variant: small-caps;
     font-size: .8em; }
-
-.editing-label {
-  color: #36535d; }
 
 .cw-form-button {
   margin-top: 20px;

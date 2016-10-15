@@ -3,12 +3,12 @@
   <div class="mdl-grid">
     <div class="mdl-cell" ng-repeat="story in vm.stories">
       <div class="demo-card-square mdl-card cw-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
+      <div class="mdl-card__title" ng-style="{ 'background-image' : 'url({{story.coverImage}})' }">
         <h2 class="mdl-card__title-text">{{story.title}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
         <p class="genre">Genre: {{story.genre}} </p>
-        <p class="story-summary"><span class="title"> Starting Point: </span>{{story.summary}}</p>
+        <p class="story-summary"><span class="title"> Summary: </span>{{story.summary}}</p>
         <p class="blurb">blurb</p>
       </div>
       <div class="mdl-card__actions mdl-card--border">

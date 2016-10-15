@@ -60,7 +60,7 @@ footer {
 	}
 }
 
-// header and navigation
+// Main header and navigation
 
 .cw-header {
 	color: #fff;
@@ -164,7 +164,7 @@ footer {
 	}
 }
 
-// container and other general layout
+// Stories and other general layout
 
 .cw-container {
 	width: 1200px;
@@ -179,8 +179,7 @@ footer {
 
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background:
-    url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630;
+  // background: url(http://bit.ly/1NmHjNk) bottom right 15% no-repeat #202630;
 }
 
 .cw-card-large {
@@ -248,7 +247,7 @@ footer {
 }
 
 
-// utility styles
+// story styles
 
 .story-summary {
 	line-height: normal;
@@ -272,9 +271,7 @@ footer {
 	}
 }
 
-.editing-label {
-	color: rgb(54, 83, 93);
-}
+// Utilities
 
 .cw-form-button {
 	margin-top: 20px;
