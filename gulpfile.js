@@ -11,14 +11,14 @@ gulp.task('watch', function() {
 })
 
 gulp.task('styles', () => {
-  return gulp.src('./src/scss/*.scss')
+  gulp.src('./src/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/stylesheets/'))
 })
 
-gulp.task('scripts', () => {
-  return gulp.src('./src/javascripts/**/*.js')
-    .pipe(concat('scripts.js'))
+gulp.task('scripts', function() {
+  gulp.src('./src/javascripts/*.js')
+    .pipe(concat('scripts.min.js'))
     .pipe(minify())
-    .pipe(gulp.dest('./public/javascripts/'))
+    .pipe(gulp.dest('./public//'))
 })
