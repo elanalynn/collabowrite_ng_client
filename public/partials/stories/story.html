@@ -6,11 +6,11 @@
         <h2 class="mdl-card__title-text">{{vm.story.title}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        <p>Owned by: {{vm.story.author}} </p>
+        <p>Owned by: {{vm.story.user}} </p>
         <p class="genre">Genre: {{vm.story.genre}} </p>
         <p class="story-summary"><span class="title"> Starting Point: </span>{{vm.story.summary}}</p>
         <div ng-repeat="chapter in vm.chapters">
-          <p>{{chapter.title}}</p>
+          <p>Chapter title: {{chapter.title}}</p>
         </div>
       </div>
       <div class="mdl-card__actions mdl-card--border">
