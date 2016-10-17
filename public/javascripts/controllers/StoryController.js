@@ -13,14 +13,14 @@ function StoryController($stateParams, $location, userService,  storyService) {
       vm.story = story.data
       return vm.story
     })
-    .then(story => Promise.all([userService.getUser(story.user_id), storyService.getGenre(story.genre_id), storyService.getChapters(story.id)])
-      .then(data => {
-        vm.story.user = `${data[0].data.first_name} ${data[0].data.last_name}`
-        vm.story.genre = data[1].data.genre
-        vm.story.chapters = data[2].data.data
-        console.log(vm.story)
-      })
+    .then(story => Promise.all([ userService.getUser(story.user_id), storyService.getGenre(story.genre_id), storyService.getChapters(story.id)])
     )
+    .then(data => {
+      vm.story.user = `${data[0].data.first_name} ${data[0].data.last_name}`
+      vm.story.genre = data[1].data.genre
+      vm.story.chapters = data[2].data.data
+      console.log(vm.story)
+    })
   }
 
   vm.createStory = story => {
