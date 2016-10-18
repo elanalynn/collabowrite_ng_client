@@ -5,21 +5,32 @@
         <h2>{{vm.story.title}}</h2>
         <h4>...Write the Next Chapter...</h4>
         <p class="cw-guidelines">Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
-        <form ng-submit="vm.createChapter(vm.chapter)">
+        <form name="newChapterForm" ng-submit="vm.createChapter(vm.chapter)" novalidate>
           <input hidden ng-model="vm.chapter.user_id">
           <input hidden ng-model="vm.chapter.story_id">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" ng-model="vm.chapter.title" required>
+            <input class="mdl-textfield__input" type="text" ng-model="vm.chapter.title" ng-minlength=3 ng-maxlength=30 required>
             <label class="mdl-textfield__label">Title</label>
-            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
+            <small class="error" ng-show="newChapterForm.title.$invalid && !newChapterForm.title.$pristine">
+              The title must be at least 3 characters long.
+            </small>
+            <small class="error" ng-show="newChapterForm.title.$error.maxlength">
+              The title must be less than 30 characters long.
+            </small>
           </div>
-          <textarea class="materialize-textarea" type="text" rows="20" ng-model="vm.chapter.body" required></textarea>
+          <textarea class="materialize-textarea" type="text" rows="20" ng-model="vm.chapter.body" ng-minlength=100 ng-maxlength=3000 required></textarea>
+          <small class="error" ng-show="newChapterForm.body.$error.minlength">
+            The body must be at least 100 characters long.
+          </small>
+          <small class="error" ng-show="newChapterForm.body.$error.maxlength">
+            The body must be less than 3000 characters long.
+          </small>
 
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">
             Submit
           </button>
         </form>
-        <p class="cw-chapters-header"><span class="title">Most Recently: </span>{{vm.last_chapter.title}}</p>
+        <p class="cw-chapters-header"><span class="title">Most Recent: </span>{{vm.last_chapter.title}}</p>
         <p class="cw-chapter-body">{{vm.last_chapter.body}}</p>
       </div>
     </div>

@@ -1,0 +1,15 @@
+.ng-pristine {
+
+}
+
+.ng-dirty {
+  background-color: rgba(249, 247, 122, 0.5);
+}
+
+.ng-valid {
+  background-color: rgba(155, 249, 122, 0.5);
+}
+
+.ng-invalid {
+  background-color: rgba(249, 148, 122, 0.5);
+}
