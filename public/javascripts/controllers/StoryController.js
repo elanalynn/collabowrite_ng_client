@@ -11,6 +11,7 @@ function StoryController($stateParams, $location, userService,  storyService, ch
     storyService.getStory($stateParams.id)
     .then(story => {
       vm.story = story.data
+      console.log(vm.story)
       return vm.story
     })
     .then(story => Promise.all([

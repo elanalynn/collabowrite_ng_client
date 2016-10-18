@@ -19,10 +19,16 @@ function ChapterController($stateParams, $location, userService, storyService, c
 
   vm.createChapter = chapter => {
     console.log(chapter)
-    chapterService.createChapter(chapter)
-    .then(response => {
-      console.log(response)
-      $location.url(`stories/${response.data.story_id}/chapters/${response.data.id}`)
+    const newChapter = chapter
+    userService.getLoggedInUser()
+    .then(user => {
+      newChapter.story_id = vm.story.id
+      newChapter.user_id = user.data.user.id
+      return chapterService.createChapter(newChapter)
+      .then(res => {
+        console.log('responsarino', res)
+        $location.url(`stories/${newChapter.story_id}/chapters/${res.data.data[0]}`)
+      })
     })
   }
 }
