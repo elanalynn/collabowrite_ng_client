@@ -117,22 +117,6 @@ footer {
       text-align: center;
       font-size: .8em; }
 
-.cw-container {
-  width: 1200px;
-  max-width: 80%;
-  margin: 0 auto; }
-
-.cw-card-large {
-  max-width: 100%;
-  margin: 0;
-  padding: 40px;
-  background: #fff;
-  display: flex;
-  flex-direction: column; }
-  .cw-card-large h4, .cw-card-large p {
-    align-self: center;
-    margin-top: -10px; }
-
 .cw-dashboard-header {
   display: flex;
   justify-content: space-between; }
@@ -171,6 +155,30 @@ footer {
 .cw-settings-list {
   list-style: none; }
 
+.cw-container {
+  width: 1200px;
+  max-width: 80%;
+  margin: 0 auto; }
+
+.cw-card-large {
+  max-width: 100%;
+  margin: 0;
+  padding: 40px;
+  background: #fff;
+  display: flex;
+  flex-direction: column; }
+  .cw-card-large h4, .cw-card-large p {
+    align-self: center;
+    margin-top: -10px; }
+  .cw-card-large .cw-chapters-header {
+    font-variant: small-caps;
+    margin-top: 30px; }
+    .cw-card-large .cw-chapters-header .title {
+      color: #235566; }
+  .cw-card-large .cw-chapter-body {
+    font-size: 1em;
+    align-self: flex-start; }
+
 .cw-card {
   width: 300px;
   max-width: 100%; }
@@ -198,11 +206,6 @@ footer {
   margin-top: -30px;
   font-size: 1.2em; }
   .summary .title, .chapter .title {
-    color: #235566; }
-
-.cw-last-contribution {
-  font-size: .95em; }
-  .cw-last-contribution .title {
     color: #235566; }
 
 .cw-guidelines {

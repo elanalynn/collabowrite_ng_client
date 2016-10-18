@@ -164,27 +164,6 @@ footer {
 	}
 }
 
-// General layout
-
-.cw-container {
-	width: 1200px;
-	max-width: 80%;
-	margin: 0 auto;
-}
-
-.cw-card-large {
-	max-width: 100%;
-	margin: 0;
-	padding: 40px;
-	background: #fff;
-	display: flex;
-	flex-direction: column;
-
-	h4, p {
-		align-self: center;
-		margin-top: -10px;
-	}
-}
 
 //dashboard
 
@@ -244,7 +223,41 @@ footer {
 }
 
 
-// story styles
+// General and stories layout
+
+.cw-container {
+	width: 1200px;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.cw-card-large {
+	max-width: 100%;
+	margin: 0;
+	padding: 40px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+
+	h4, p {
+		align-self: center;
+		margin-top: -10px;
+	}
+
+	.cw-chapters-header {
+		font-variant: small-caps;
+		margin-top: 30px;
+
+		.title {
+			color: rgb(35, 85, 102);
+		}
+	}
+
+	.cw-chapter-body {
+		font-size: 1em;
+		align-self: flex-start;
+	}
+}
 
 .cw-card {
 	width: 300px;
@@ -279,14 +292,6 @@ footer {
 	font-variant: small-caps;
 	margin-top: -30px;
 	font-size: 1.2em;
-
-	.title {
-		color: rgb(35, 85, 102);
-	}
-}
-
-.cw-last-contribution {
-	font-size: .95em;
 
 	.title {
 		color: rgb(35, 85, 102);
