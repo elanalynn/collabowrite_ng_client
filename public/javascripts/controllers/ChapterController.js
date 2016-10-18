@@ -20,13 +20,11 @@ function ChapterController($stateParams, $location, userService, storyService, c
       userService.getUser(chapter.data.user_id)
       .then(details => {
         vm.chapter.user = `${details.data.first_name} ${details.data.last_name}`
-        console.log('11', vm.chapter)
       })
     })
   }
 
   vm.createChapter = chapter => {
-    console.log(chapter)
     const newChapter = chapter
     userService.getLoggedInUser()
     .then(user => {
