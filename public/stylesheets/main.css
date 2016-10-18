@@ -214,7 +214,7 @@ footer {
   font-style: italic;
   color: #495c7a; }
 
-textarea {
+textarea, .mdl-textfield, .mdl-js-textfield, .mdl-textfield--floating-label {
   width: 100%; }
 
 .cw-form-button {

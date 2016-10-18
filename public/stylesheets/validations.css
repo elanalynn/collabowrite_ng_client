@@ -1,8 +1,16 @@
-.ng-dirty {
-  background-color: rgba(249, 247, 122, 0.5); }
+.error {
+  color: #ed0b4f;
+  align-self: flex-start;
+  font-size: .8em; }
 
-.ng-valid {
-  background-color: rgba(155, 249, 122, 0.5); }
+input.ng-invalid.ng-touched {
+  border-bottom: 2px solid #f9947a; }
 
-.ng-invalid {
-  background-color: rgba(249, 148, 122, 0.5); }
+textarea.ng-invalid.ng-touched {
+  border: 2px solid #f9947a; }
+
+input.ng-valid {
+  border-bottom: 2px solid #27bd2d; }
+
+textarea.ng-valid {
+  border: 2px solid #27bd2d; }
