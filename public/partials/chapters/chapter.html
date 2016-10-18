@@ -1,0 +1,20 @@
+<article class="cw-container">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="cw-card-large mdl-shadow--2dp">
+      <div class="mdl-card__supporting-text">
+        <h3><span class="title">Chapter: </span>{{vm.chapter.title}}</h3>
+        <section class="cw-chapter-details">
+          <p class="owner"><span class="title">By:</span> {{vm.chapter.user}}</p>
+        </section>
+        <!-- <img class="cw-chapter-cover" src="{{vm.chapter.cover}}" alt="{{vm.chapter.title}}" /> -->
+        <p class="chapter"><span class="title">Body: </span>{{vm.chapter.body}}</p>
+        <div class="mdl-card__actions mdl-card--border">
+          <a ui-sref="story_detail({storyId: vm.story.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Back to Story
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
