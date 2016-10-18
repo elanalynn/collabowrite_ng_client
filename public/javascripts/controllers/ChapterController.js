@@ -5,8 +5,9 @@ function ChapterController($stateParams, $location, userService, storyService, c
   .then(story => vm.story = story.data)
 
   chapterService.getChapters($stateParams.storyId).then(chapters => {
-    console.log(chapters)
     vm.chapters = chapters.data.data
+    vm.last_chapter = vm.chapters[vm.chapters.length - 1]
+    console.log(vm.last_chapter)
   })
 
   if ($stateParams.chapterId) {

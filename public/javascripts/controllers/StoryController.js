@@ -11,7 +11,6 @@ function StoryController($stateParams, $location, userService,  storyService, ch
     storyService.getStory($stateParams.id)
     .then(story => {
       vm.story = story.data
-      console.log(vm.story)
       return vm.story
     })
     .then(story => Promise.all([
@@ -20,10 +19,10 @@ function StoryController($stateParams, $location, userService,  storyService, ch
       chapterService.getChapters(story.id),
     ]))
     .then(details => {
-      console.log(details)
       vm.story.user = `${details[0].data.first_name} ${details[0].data.last_name}`
       vm.story.genre = details[1].data.genre
       vm.story.chapters = details[2].data.data
+      vm.story.last_chapter = vm.story.chapters[vm.story.chapters.length - 1]
     })
   }
 

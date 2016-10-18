@@ -1,7 +1,7 @@
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #333;
 	background: url(/assets/main/notebook.png) repeat;
 }
@@ -255,19 +255,30 @@ footer {
   color: #fff;
 }
 
-.genre {
+.cw-story-cover {
+	width: 100%;
+}
+
+.cw-story-details {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -10px;
+}
+
+.owner, .genre {
 	font-variant: small-caps;
-	font-size: .85em;
+	font-size: 1em;
 
 	.title {
+		font-weight: bold;
 		color: rgb(35, 85, 102);
 	}
 }
 
-.summary {
+.summary, .last-chapter {
 	font-variant: small-caps;
 	margin-top: -30px;
-	font-size: .9em;
+	font-size: 1.2em;
 
 	.title {
 		color: rgb(35, 85, 102);

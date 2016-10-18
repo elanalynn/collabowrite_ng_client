@@ -1,7 +1,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #333;
   background: url(/assets/main/notebook.png) repeat; }
 
@@ -178,17 +178,26 @@ footer {
 .demo-card-square > .mdl-card__title {
   color: #fff; }
 
-.genre {
+.cw-story-cover {
+  width: 100%; }
+
+.cw-story-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px; }
+
+.owner, .genre {
   font-variant: small-caps;
-  font-size: .85em; }
-  .genre .title {
+  font-size: 1em; }
+  .owner .title, .genre .title {
+    font-weight: bold;
     color: #235566; }
 
-.summary {
+.summary, .last-chapter {
   font-variant: small-caps;
   margin-top: -30px;
-  font-size: .9em; }
-  .summary .title {
+  font-size: 1.2em; }
+  .summary .title, .last-chapter .title {
     color: #235566; }
 
 .cw-last-contribution {
