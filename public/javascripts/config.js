@@ -71,6 +71,24 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'StoryController',
     controllerAs: 'vm',
   })
+  .state('chapter_new', {
+    url: '/stories/:storyId/chapters/new',
+    templateUrl: '../partials/chapters/new.html',
+    controller: 'ChapterController',
+    controllerAs: 'vm',
+  })
+  .state('chapter_detail', {
+    url: '/stories/:storyId/chapters/:chapterId',
+    templateUrl: '../partials/chapters/chapter.html',
+    controller: 'ChapterController',
+    controllerAs: 'vm',
+  })
+  .state('chapter_edit', {
+    url: '/stories/:storyId/chapters/:chapterId/edit',
+    templateUrl: '../partials/chapters/edit.html',
+    controller: 'ChapterController',
+    controllerAs: 'vm',
+  })
   .state('users', {
     url: '/users',
     templateUrl: '../partials/users/users.html',

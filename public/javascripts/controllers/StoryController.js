@@ -1,4 +1,4 @@
-function StoryController($stateParams, $location, userService,  storyService) {
+function StoryController($stateParams, $location, userService,  storyService, chapterService) {
   const vm = this
 
   userService.getLoggedInUser().then(user => vm.user = user)
@@ -11,15 +11,19 @@ function StoryController($stateParams, $location, userService,  storyService) {
     storyService.getStory($stateParams.id)
     .then(story => {
       vm.story = story.data
+      console.log(vm.story)
       return vm.story
     })
-    .then(story => Promise.all([ userService.getUser(story.user_id), storyService.getGenre(story.genre_id), storyService.getChapters(story.id)])
-    )
-    .then(data => {
-      vm.story.user = `${data[0].data.first_name} ${data[0].data.last_name}`
-      vm.story.genre = data[1].data.genre
-      vm.story.chapters = data[2].data.data
-      console.log(vm.story)
+    .then(story => Promise.all([
+      userService.getUser(story.user_id),
+      storyService.getGenre(story.genre_id),
+      chapterService.getChapters(story.id),
+    ]))
+    .then(details => {
+      console.log(details)
+      vm.story.user = `${details[0].data.first_name} ${details[0].data.last_name}`
+      vm.story.genre = details[1].data.genre
+      vm.story.chapters = details[2].data.data
     })
   }
 

@@ -5,17 +5,15 @@
         <h2>Start a New Story</h2>
         <p>Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
         <form ng-submit="vm.createStory(vm.story)">
+          <input hidden ng-model="vm.story.user_id">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" hidden ng-model="vm.story.user_id">
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" placeholder="Name your story!"  ng-model="vm.story.title">
-            <label class="mdl-textfield__label" for="title">Title</label>
+            <input class="mdl-textfield__input" type="text" placeholder="Name your story..."  ng-model="vm.story.title">
+            <label class="mdl-textfield__label">Title</label>
             <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" placeholder="Just a sentence. Update this at any time." ng-model="vm.story.summary">
-            <label class="mdl-textfield__label" for="summary">Summary</label>
+            <label class="mdl-textfield__label">Summary</label>
             <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
           </div>
           <label for="genre">Genre</label>
