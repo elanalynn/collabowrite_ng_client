@@ -177,6 +177,13 @@ footer {
 	margin: 0;
 	padding: 40px;
 	background: #fff;
+	display: flex;
+	flex-direction: column;
+
+	h4, p {
+		align-self: center;
+		margin-top: -10px;
+	}
 }
 
 //dashboard
@@ -275,6 +282,16 @@ footer {
 	}
 }
 
+.cw-guidelines {
+	margin: -15px auto 30px;
+	font-size: 1em;
+	font-style: italic;
+	color: rgb(73, 92, 122);
+}
+
+textarea {
+	width: 100%;
+}
 
 // Utilities
 

@@ -1,5 +1,8 @@
-function ChapterController($stateParams, $location, userService, chapterService) {
+function ChapterController($stateParams, $location, userService, storyService, chapterService) {
   const vm = this
+
+  storyService.getStory($stateParams.storyId)
+  .then(story => vm.story = story.data)
 
   chapterService.getChapters($stateParams.storyId).then(chapters => {
     console.log(chapters)
@@ -15,10 +18,11 @@ function ChapterController($stateParams, $location, userService, chapterService)
   }
 
   vm.createChapter = chapter => {
-    const newChapter = chapter
-    userService.getLoggedInUser()
-    .then(user => newChapter.user_id = user.data.user.id)
-    .then(() => chapterService.createChapter(newChapter))
-    .then(response => $location.url(`/chapters/${response.data.id}`))
+    console.log(chapter)
+    chapterService.createChapter(chapter)
+    .then(response => {
+      console.log(response)
+      $location.url(`stories/${response.data.story_id}/chapters/${response.data.id}`)
+    })
   }
 }

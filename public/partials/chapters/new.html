@@ -2,22 +2,23 @@
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
       <div class="cw-card-large mdl-shadow--2dp">
-        <h2>Write the Next Chapter</h2>
-        <p>Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
+        <h2>{{vm.story.title}}</h2>
+        <h4>...Write the Next Chapter...</h4>
+        <p class="cw-guidelines">Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
         <form ng-submit="vm.createChapter(vm.chapter)">
           <input hidden ng-model="vm.chapter.user_id">
           <input hidden ng-model="vm.chapter.story_id">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" placeholder="Name your chapter..."  ng-model="vm.story.title">
+            <input class="mdl-textfield__input" type="text" ng-model="vm.chapter.title" required>
             <label class="mdl-textfield__label">Title</label>
             <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
           </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" ng-model="vm.chapter.body">
-            <label class="mdl-textfield__label">Body</label>
-            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
-          </div>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">Get Started</button>
+          <textarea class="materialize-textarea" type="text" rows="20" ng-model="vm.chapter.body" required></textarea>
+
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">
+            Submit
+          </button>
+
         </form>
       </div>
     </div>
