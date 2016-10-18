@@ -12,8 +12,10 @@
           <p class="genre"><span class="title">Genre:</span> {{vm.story.genre}}</p>
         </section>
         <p class="summary"><span class="title"> Starting Point: </span>{{vm.story.summary}}</p>
-        <p class="last-chapter"><span class="title">Last Chapter:</span> {{vm.story.last_chapter.title}}</p>
-        <p>... {{vm.story.last_chapter.body}} ...</p>
+        <section ng-repeat="chapter in vm.story.chapters">
+          <p class="chapter"><span class="title">{{chapter.title}}</span></p>
+          <p>... {{chapter.body}} ...</p>
+        </section>
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a ui-sref="chapter_new({storyId: vm.story.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
