@@ -4,21 +4,31 @@
       <div class="cw-card-large mdl-shadow--2dp">
         <h2>Start a New Story</h2>
         <p class="cw-guidelines">Have you read the <a href="/#/#guidelines" target="_blank">community guidelines</a>?</p>
-        <form ng-submit="vm.createStory(vm.story)">
+        <form name="newStoryForm" ng-submit="vm.createStory(vm.story)">
           <input hidden ng-model="vm.story.user_id">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" ng-model="vm.story.title" required>
+            <input class="mdl-textfield__input" name="title" type="text" ng-model="vm.story.title" ng-focus="focus" ng-minlength=3 ng-maxlength=30 required>
             <label class="mdl-textfield__label">Title</label>
-            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
+            <small class="error" ng-show="newStoryForm.title.$error.minlength && newStoryForm.title.$touched && !focus">
+              The title must be at least 3 characters long.
+            </small>
+            <small class="error" ng-show="newStoryForm.title.$error.maxlength && newStoryForm.title.$dirty && !focus">
+              The title must be less than 30 characters long.
+            </small>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" ng-model="vm.story.summary" required>
+            <input class="mdl-textfield__input" type="text" name="summary" ng-model="vm.story.summary" ng-focus="focus" ng-minlength=40 ng-maxlength=140 required>
             <label class="mdl-textfield__label">Summary</label>
-            <!-- <span class="mdl-textfield__error">Input is not correct!</span> -->
+            <small class="error" ng-show="newStoryForm.summary.$error.minlength && newStoryForm.summary.$touched && !focus">
+              The summary must be at least 40 characters long.
+            </small>
+            <small class="error" ng-show="newStoryForm.summary.$error.maxlength && newStoryForm.summary.$dirty && !focus">
+              The summary must be less than 140 characters long.
+            </small>
           </div>
           <label for="genre">Genre</label>
           <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-            <select class="mdl-selectfield__select" ng-model="vm.story.genre_id">
+            <select class="mdl-selectfield__select" ng-model="vm.story.genre_id" required>
               <option selected value="1">Let's see what happens!</option>
               <option value="2">Children's</option>
               <option value="3">Comedy</option>
@@ -33,7 +43,7 @@
             </select>
           </div>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">
-            Get Started
+            Go!
           </button>
         </form>
       </div>
