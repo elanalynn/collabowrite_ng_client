@@ -34,4 +34,11 @@ function StoryController($stateParams, $location, userService,  storyService, ch
     .then(() => storyService.createStory(newStory))
     .then(response => $location.url(`/stories/${response.data.id}`))
   }
+
+  vm.favorite = false
+
+  vm.favoriteToggle = () => {
+    if (vm.favorite === true) vm.favorite = false
+    else vm.favorite = true
+  }
 }

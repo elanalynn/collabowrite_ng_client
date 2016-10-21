@@ -177,6 +177,9 @@ footer {
   .cw-card-large h4, .cw-card-large p {
     align-self: center;
     margin-top: -10px; }
+  .cw-card-large .cw-story-header {
+    display: flex;
+    justify-content: space-between; }
   .cw-card-large .cw-chapters-header {
     font-variant: small-caps;
     margin-top: 30px; }
@@ -223,6 +226,9 @@ footer {
 
 textarea, .mdl-textfield, .mdl-js-textfield, .mdl-textfield--floating-label {
   width: 100%; }
+
+.cw-favorite {
+  cursor: pointer; }
 
 .cw-form-button {
   margin-top: 20px;
