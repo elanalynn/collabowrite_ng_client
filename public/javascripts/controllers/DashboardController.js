@@ -1,5 +1,6 @@
 function DashboardController($state, userService, dashboardService) {
   var vm = this
+  vm.chapters = []
 
   vm.getState = path => {
     if (path === $state.current.url) return {active: true}
@@ -11,7 +12,7 @@ function DashboardController($state, userService, dashboardService) {
     else return user.data.user._json
   })
   .then(user => {
-    userService.findOrCreate(user)
+    userService.getUser(user.id)
     .then(user => {
       vm.user = user.data
       return user.data.id
@@ -20,13 +21,17 @@ function DashboardController($state, userService, dashboardService) {
       dashboardService.getUserStories(id)
       .then(stories => {
         vm.stories = stories.data.data
-        return vm.stories.map(story => story.id)
+        return vm.stories.map(story => story.storyId)
       })
       .then(storyIds => {
-        storyIds.map(id => dashboardService.getChapters(id)
+        storyIds.map(id => {
+        dashboardService.getChapters(id)
         .then(chapters => {
-          vm.chapters = {id: chapters.data}
-        }))
+          chapters.data.data.forEach(chapter => {
+            vm.chapters.push(chapter)
+            })
+          })
+        })
       })
     })
   })

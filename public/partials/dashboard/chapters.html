@@ -1,1 +1,5 @@
-<h1>This is the chapters tab</h1>
+<ul>
+  <section ng-repeat="chapter in vm.chapters">
+    <li><a ui-sref="story_detail({id: story.id})">{{chapter.title}}</a> <span>(Story: {{chapter.story}})</span></li>
+  </section>
+</ul>
