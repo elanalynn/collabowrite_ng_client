@@ -1,21 +1,24 @@
-<div class="cw-dash-content-wrapper">
-  <section class="cw-settings-header">
-    <button ui-sref="dashboard.edit" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
-      <i class="material-icons">lock_outline</i>
-    </button>
-  </section>
-  <section class="cw-settings-body">
-    <ul class="cw-settings-list">
-      <li>First Name: {{vm.user.first_name}}</li>
-      <li>Last Name: {{vm.user.last_name}}</li>
-      <li>Handle: {{vm.user.handle}}</li>
-      <li>Location: {{vm.user.location}}</li>
-      <li>CollaboWriter Since: {{vm.user.created_at}}</li>
-      <li>Bio: {{vm.user.bio}}</li>
-      <li>Email: {{vm.user.email}}</li>
-      <li>Avatar: </li>
-    </ul>
-    <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
-  </section>
-  <section class="cw-settings-footer"></section>
-</div>
+<section class="cw-settings-header">
+  <button ui-sref="dashboard.edit" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+    <i class="material-icons">lock_outline</i>
+  </button>
+</section>
+<section class="cw-settings-body">
+
+  <ul class="cw-settings-list">
+    <li>First: {{vm.user.first_name}}</li>
+    <li>Last: {{vm.user.last_name}}</li>
+    <li>Handle: {{vm.user.handle}}</li>
+    <li>Location: {{vm.user.location}}</li>
+    <li>CollaboWriter Since: {{vm.user.created_at}}</li>
+    <li>Bio: {{vm.user.bio}}</li>
+    <li>Email: {{vm.user.email}}</li>
+    <li>Avatar: </li>
+  </ul>
+
+  <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
+  
+</section>
+<section class="cw-settings-footer">
+
+</section>

@@ -136,24 +136,31 @@ footer {
   .cw-dash-navigation-row .first {
     margin-left: 30px; }
 
-.cw-dash-content-wrapper {
-  padding: 0 30px;
+.cw-dashboard-wrapper {
+  padding: 30px;
+  background-color: rgba(227, 238, 249, 0.8);
   border-radius: 3px;
   margin: 0 auto; }
 
-.cw-settings-header, .cw-settings-footer, .cw-settings-body {
+.cw-settings-header, .cw-settings-body, .cw-settings-footer {
   min-width: 100%;
-  padding: 10px 30px 0 30px;
   display: flex;
-  background-color: rgba(227, 238, 249, 0.8);
-  min-height: 60px; }
-  .cw-settings-header h3, .cw-settings-footer h3, .cw-settings-body h3 {
+  justify-content: space-between; }
+  .cw-settings-header h3, .cw-settings-body h3, .cw-settings-footer h3 {
     text-align: left; }
-  .cw-settings-header button, .cw-settings-footer button, .cw-settings-body button {
-    align-self: flex-end; }
+  .cw-settings-header button, .cw-settings-body button, .cw-settings-footer button {
+    margin-right: 20px; }
+
+.cw-settings-header, .cw-settings-footer {
+  display: flex;
+  justify-content: flex-end; }
 
 .cw-settings-list {
   list-style: none; }
+
+#edit-profile-form {
+  width: 80%;
+  margin-bottom: 100px; }
 
 .cw-container {
   width: 1200px;
@@ -228,3 +235,6 @@ textarea, .mdl-textfield, .mdl-js-textfield, .mdl-textfield--floating-label {
 .cw-circle-small {
   border-radius: 50%;
   width: 100%; }
+
+.cw-bg-danger {
+  background-color: #f56311; }
