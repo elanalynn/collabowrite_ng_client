@@ -6,6 +6,7 @@ angular
   .controller('StoryController', StoryController)
   .controller('UserController', UserController)
   .controller('DashboardController', DashboardController)
+  .factory('favoriteService', favoriteService)
   .factory('chapterService', chapterService)
   .factory('storyService', storyService)
   .factory('userService', userService)

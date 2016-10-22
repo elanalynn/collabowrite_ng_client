@@ -10,11 +10,11 @@
         </section>
       </div>
       <div class="mdl-card__supporting-text">
-        <img class="cw-story-cover" src="{{vm.story.cover}}" alt="{{vm.story.title}}" />
         <section class="cw-story-details">
           <p class="owner"><span class="title">Started by:</span> {{vm.story.user}}</p>
           <p class="genre"><span class="title">Genre:</span> {{vm.story.genre}}</p>
         </section>
+        <img class="cw-story-cover" src="{{vm.story.cover}}" alt="{{vm.story.title}}" />
         <p class="summary"><span class="title"> Starting Point: </span>{{vm.story.summary}}</p>
         <section ng-repeat="chapter in vm.story.chapters">
           <p class="chapter"><span class="title">{{chapter.title}}</span></p>

@@ -38,7 +38,7 @@ footer {
 	align-items: center;
 	justify-content: center;
 	height: 30px;
-	background-color: rgba(19, 41, 78, 0.8);
+	background-color: #05357F;
 
 	span, a {
 		color: rgba(134, 134, 134, 0.8);
@@ -64,7 +64,7 @@ footer {
 
 .cw-header {
 	color: #fff;
-	background-color: rgba(19, 41, 78, 0.8);
+	background-color: #096afc;
 
 	.mdl-layout__drawer-button {
 	  background-color: rgba(197, 197, 197, 0.8);
@@ -125,13 +125,14 @@ footer {
 .btn-hero {
 	padding: 20px 40px;
 	color: #fff;
-	background-color: rgba(19, 41, 78, 0.8);
+	background-color: #096afc;
 	font-size: 2em;
-	margin-top: 30px;
+	margin: 30px;
+	border-radius: 2px;
 }
 
 .btn-hero:hover {
-	background-color: rgba(35, 60, 103, 0.8);
+	background-color: #fbe204;
 }
 
 .features {
@@ -139,15 +140,23 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	max-width: 60%;
+	max-width: 100%;
 
 	.feature {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 30%;
-		height: auto;
-		margin: 0 30px;
+		width: 140px;
+		height: 140px;
+		max-width: 30%;
+		max-height: 30%;
+		margin: 10px;
+		border-radius: 50%;
+
+		i {
+			font-size: 6em;
+			margin-top: 30px;
+		}
 
 		img {
 			width: 100%;
@@ -158,10 +167,23 @@ footer {
 		}
 
 		p {
+			margin-top: 60px;
 			text-align: center;
 			font-size: .8em;
 		}
 	}
+}
+
+.idea {
+	border: 8px solid #ffcf00;
+}
+
+.contribute {
+	border: 8px solid #0094ff;
+}
+
+.share {
+	border: 8px solid #d400ff;
 }
 
 
@@ -276,8 +298,9 @@ footer {
 }
 
 .cw-card {
-	width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
+	max-height: 300px;
 }
 
 .demo-card-square > .mdl-card__title {
@@ -286,6 +309,7 @@ footer {
 
 .cw-story-cover {
 	width: 100%;
+	margin-bottom: 40px;
 }
 
 .cw-story-details, .cw-chapter-details {
@@ -300,13 +324,16 @@ footer {
 
 	.title {
 		font-weight: bold;
-		color: rgb(35, 85, 102);
+		color: #235566;
 	}
+}
+
+.cw-last-contribution {
+	font-size: 1em;
 }
 
 .summary, .chapter {
 	font-variant: small-caps;
-	margin-top: -30px;
 	font-size: 1.2em;
 
 	.title {
@@ -327,6 +354,7 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 
 .cw-favorite {
 	cursor: pointer;
+	font-size: 2em;
 }
 
 // Utilities
@@ -347,5 +375,5 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 }
 
 .cw-bg-danger {
-	background-color: rgb(245, 99, 17);
+	background-color: #db078d;
 }

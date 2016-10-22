@@ -1,7 +1,7 @@
-function StoryController($stateParams, $location, userService,  storyService, chapterService) {
+function StoryController($stateParams, $location, userService,  storyService, chapterService, favoriteService) {
   const vm = this
 
-  userService.getLoggedInUser().then(user => vm.user = user)
+  userService.getLoggedInUser().then(user => vm.user = user.data.user)
 
   storyService.getStories().then(stories => {
     vm.stories = stories.data.data
@@ -11,7 +11,6 @@ function StoryController($stateParams, $location, userService,  storyService, ch
     storyService.getStory($stateParams.id)
     .then(story => {
       vm.story = story.data
-      console.log(vm.story)
       return vm.story
     })
     .then(story => Promise.all([
@@ -38,7 +37,13 @@ function StoryController($stateParams, $location, userService,  storyService, ch
   vm.favorite = false
 
   vm.favoriteToggle = () => {
-    if (vm.favorite === true) vm.favorite = false
-    else vm.favorite = true
+    console.log(vm.favorite)
+    if (vm.favorite === true) {
+      vm.favorite = false
+      favoriteService.setFavorite({user_id: vm.user.id, story_id: vm.story.id, boolean: false}).then(() => {})
+    } else {
+      vm.favorite = true
+      favoriteService.setFavorite({user_id: vm.user.id, story_id: vm.story.id, boolean: true}).then(() => {})
+    }
   }
 }

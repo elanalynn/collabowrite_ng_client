@@ -32,7 +32,7 @@ footer {
   align-items: center;
   justify-content: center;
   height: 30px;
-  background-color: rgba(19, 41, 78, 0.8); }
+  background-color: #05357F; }
   footer span, footer a {
     color: rgba(134, 134, 134, 0.8); }
 
@@ -47,7 +47,7 @@ footer {
 
 .cw-header {
   color: #fff;
-  background-color: rgba(19, 41, 78, 0.8); }
+  background-color: #096afc; }
   .cw-header .mdl-layout__drawer-button {
     background-color: rgba(197, 197, 197, 0.8); }
   .cw-header .cw-navigation-row {
@@ -87,26 +87,33 @@ footer {
 .btn-hero {
   padding: 20px 40px;
   color: #fff;
-  background-color: rgba(19, 41, 78, 0.8);
+  background-color: #096afc;
   font-size: 2em;
-  margin-top: 30px; }
+  margin: 30px;
+  border-radius: 2px; }
 
 .btn-hero:hover {
-  background-color: rgba(35, 60, 103, 0.8); }
+  background-color: #fbe204; }
 
 .features {
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 60%; }
+  max-width: 100%; }
   .features .feature {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: auto;
-    margin: 0 30px; }
+    width: 140px;
+    height: 140px;
+    max-width: 30%;
+    max-height: 30%;
+    margin: 10px;
+    border-radius: 50%; }
+    .features .feature i {
+      font-size: 6em;
+      margin-top: 30px; }
     .features .feature img {
       width: 100%;
       height: 100%;
@@ -114,8 +121,18 @@ footer {
       max-height: 120px;
       margin: 20px; }
     .features .feature p {
+      margin-top: 60px;
       text-align: center;
       font-size: .8em; }
+
+.idea {
+  border: 8px solid #ffcf00; }
+
+.contribute {
+  border: 8px solid #0094ff; }
+
+.share {
+  border: 8px solid #d400ff; }
 
 .cw-dashboard-header {
   display: flex;
@@ -190,14 +207,16 @@ footer {
     align-self: flex-start; }
 
 .cw-card {
-  width: 300px;
-  max-width: 100%; }
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px; }
 
 .demo-card-square > .mdl-card__title {
   color: #fff; }
 
 .cw-story-cover {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 40px; }
 
 .cw-story-details, .cw-chapter-details {
   display: flex;
@@ -211,9 +230,11 @@ footer {
     font-weight: bold;
     color: #235566; }
 
+.cw-last-contribution {
+  font-size: 1em; }
+
 .summary, .chapter {
   font-variant: small-caps;
-  margin-top: -30px;
   font-size: 1.2em; }
   .summary .title, .chapter .title {
     color: #235566; }
@@ -228,7 +249,8 @@ textarea, .mdl-textfield, .mdl-js-textfield, .mdl-textfield--floating-label {
   width: 100%; }
 
 .cw-favorite {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 2em; }
 
 .cw-form-button {
   margin-top: 20px;
@@ -243,4 +265,4 @@ textarea, .mdl-textfield, .mdl-js-textfield, .mdl-textfield--floating-label {
   width: 100%; }
 
 .cw-bg-danger {
-  background-color: #f56311; }
+  background-color: #db078d; }
