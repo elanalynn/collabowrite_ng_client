@@ -4,6 +4,7 @@
   "description": "personal portfolio",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "gulp-concat": "^2.6.0",
     "gulp-minify": "0.0.14",
     "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
   }
 }
