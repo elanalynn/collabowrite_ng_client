@@ -1,16 +1,16 @@
 <article class="cw-container">
   <h1>CollaboWriters</h1>
   <div class="mdl-grid">
-    <div class="mdl-cell" ng-repeat="user in vm.users">
+    <div class="mdl-cell" ng-repeat="profile in vm.profiles">
       <div class="demo-card-square mdl-card cw-card mdl-shadow--2dp">
       <div class="mdl-card__title" ng-style="{ 'background-image' : 'url({{user.avatar}})' }">
-        <h2 class="mdl-card__title-text">{{user.first_name}} {{user.last_name}}</h2>
+        <h2 class="mdl-card__title-text">{{profile.first_name}} {{profile.last_name}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        {{user.bio}}
+        {{profile.bio}}
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a ui-sref="user_detail({id: user.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <a ui-sref="profile({id: user.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Profile
         </a>
       </div>

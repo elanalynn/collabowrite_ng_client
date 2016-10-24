@@ -1,15 +1,13 @@
-function UserController($location, userService) {
+function UserController($stateParams, $location, userService) {
   const vm = this
 
   userService.getLoggedInUser().then(user => vm.user = user)
-  userService.getUsers().then(users => vm.users = users.data)
+  userService.getProfiles().then(profiles => vm.profiles = profiles.data)
 
-  vm.updateUser = (id, body) => {
-    userService.updateUser(id, body).then(() => $location.url('/'))
-  }
+  if ($stateParams.id) userService.getProfile($stateParams.id).then(profile => vm.profile = profile.data)
 
-  vm.deactivateUser = id => {
-    userService.deactivateUser(id).then(() => $location.url('/'))
-  }
+  vm.getProfile = id => userService.getProfile(id).then(profile => vm.profile = profile)
+  vm.updateUser = (id, body) => userService.updateUser(id, body).then(() => $location.url('/'))
+  vm.deactivateUser = id => userService.deactivateUser(id).then(() => $location.url('/'))
 
 }

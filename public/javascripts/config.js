@@ -89,15 +89,15 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'ChapterController',
     controllerAs: 'vm',
   })
-  .state('users', {
-    url: '/users',
-    templateUrl: '../partials/users/users.html',
+  .state('profiles', {
+    url: '/profiles',
+    templateUrl: '../partials/users/profiles.html',
     controller: 'UserController',
     controllerAs: 'vm',
   })
-  .state('user_detail', {
-    url: '/users/:id',
-    templateUrl: '../partials/users/user.html',
+  .state('profile', {
+    url: '/profiles/:id',
+    templateUrl: '../partials/users/profile.html',
     controller: 'UserController',
     controllerAs: 'vm',
   })

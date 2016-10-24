@@ -4,10 +4,7 @@ function MainController(userService) {
   userService.getLoggedInUser()
   .then(user => {
     if (!user) return null
-    else return user.data.user._json
+    else return user.data.user.id
   })
-  .then(user => {
-    userService.findOrCreate(user)
-    .then(user => vm.user = user.data)
-  })
+  .then(userId => userService.getUser(userId).then(user => vm.user = user.data))
 }

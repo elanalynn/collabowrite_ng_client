@@ -9,14 +9,14 @@ function DashboardController($state, userService, storyService, chapterService, 
   userService.getLoggedInUser()
   .then(user => {
     if (!user) return null
-    else return user.data.user._json
+    else return user.data.user.id
   })
-  .then(user => {
+  .then(userId => {
     Promise.all([
       // get user
-      userService.getUser(user.id).then(user => vm.user = user.data),
+      userService.getUser(userId).then(user => vm.user = user.data),
       // get user stories
-      storyService.getUserStories(user.id).then(stories => {
+      storyService.getUserStories(userId).then(stories => {
         vm.stories = stories.data.data
         return vm.stories.map(story => story.storyId)
       })
@@ -31,9 +31,9 @@ function DashboardController($state, userService, storyService, chapterService, 
         })
       }),
       // get user favorites
-      favoriteService.getFavorites(user.id).then(favorites => vm.favorites = favorites),
+      favoriteService.getFavorites(userId).then(favorites => vm.favorites = favorites),
       // get user pending
-      pendingService.getPending(user.id).then(pending => vm.pending = pending),
+      pendingService.getPending(userId).then(pending => vm.pending = pending),
     ])
     .then(data => console.log(data))
 
