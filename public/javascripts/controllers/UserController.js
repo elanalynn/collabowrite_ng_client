@@ -5,15 +5,11 @@ function UserController($location, userService) {
   userService.getUsers().then(users => vm.users = users.data)
 
   vm.updateUser = (id, body) => {
-    userService.updateUser(id, body).then(response => {
-      $location.url('/')
-    })
+    userService.updateUser(id, body).then(() => $location.url('/'))
   }
 
   vm.deactivateUser = id => {
-    userService.deactivateUser(id).then(response => {
-      $location.url('/')
-    })
+    userService.deactivateUser(id).then(() => $location.url('/'))
   }
 
 }
