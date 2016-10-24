@@ -95,4 +95,10 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'UserController',
     controllerAs: 'vm',
   })
+  .state('user_detail', {
+    url: '/users/:id',
+    templateUrl: '../partials/users/user.html',
+    controller: 'UserController',
+    controllerAs: 'vm',
+  })
 }

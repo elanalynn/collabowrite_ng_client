@@ -1,1 +1,5 @@
-<h1>This is the favorites tab</h1>
+<ul>
+  <section ng-repeat="favorite in vm.favorites">
+    <li><a ui-sref="story_detail({id: story.id})">{{favorite.title}}</a></li>
+  </section>
+</ul>

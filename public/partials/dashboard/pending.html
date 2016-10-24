@@ -1,1 +1,5 @@
-<h1>This is the pending tab</h1>
+<ul>
+  <section ng-repeat="pending in vm.pending">
+    <li><a ui-sref="story_detail({id: story.id})">{{pending.title}}</a></li>
+  </section>
+</ul>
