@@ -1,8 +1,6 @@
 function ChapterController($stateParams, $location, userService, storyService, chapterService) {
   const vm = this
 
-  console.log('$stateParams', $stateParams)
-
   if ($stateParams.storyId) {
     storyService.getStory($stateParams.storyId)
     .then(story => vm.story = story.data)
