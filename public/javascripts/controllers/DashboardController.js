@@ -31,34 +31,11 @@ function DashboardController($state, userService, storyService, chapterService, 
         })
       }),
       // get user favorites
-      favoriteService.getFavorites(userId).then(favorites => vm.favorites = favorites),
-      // get user pending
-      pendingService.getPending(userId).then(pending => vm.pending = pending),
+      favoriteService.getFavoritesByUser(userId).then(favorites => vm.favorites = favorites),
+      // get pending
+      pendingService.getPendingMyApproval(userId).then(pending => vm.pendingMyApproval = pending),
+      pendingService.getPendingOtherApproval(userId).then(pending => vm.pendingOtherApproval = pending),
     ])
-    .then(data => console.log(data))
-
-
-    // userService.getUser(user.id)
-    // .then(user => {
-    //   vm.user = user.data
-    //   return user.data.id
-    // })
-    // .then(id => {
-    //   storyService.getUserStories(id)
-    //   .then(stories => {
-    //     vm.stories = stories.data.data
-    //     return vm.stories.map(story => story.storyId)
-    //   })
-    //   .then(storyIds => {
-    //     storyIds.map(id => {
-    //     chapterService.getChapters(id)
-    //     .then(chapters => {
-    //       chapters.data.data.forEach(chapter => {
-    //         vm.chapters.push(chapter)
-    //         })
-    //       })
-    //     })
-    //   })
-    // })
+    .then(data => console.log('data', data))
   })
 }

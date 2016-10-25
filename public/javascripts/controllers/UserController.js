@@ -9,5 +9,4 @@ function UserController($stateParams, $location, userService) {
   vm.getProfile = id => userService.getProfile(id).then(profile => vm.profile = profile)
   vm.updateUser = (id, body) => userService.updateUser(id, body).then(() => $location.url('/'))
   vm.deactivateUser = id => userService.deactivateUser(id).then(() => $location.url('/'))
-
 }
