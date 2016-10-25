@@ -37,7 +37,6 @@ function StoryController($stateParams, $location, userService,  storyService, ch
   vm.favorite = false
 
   vm.favoriteToggle = () => {
-    console.log(vm.favorite)
     if (vm.favorite === true) {
       vm.favorite = false
       favoriteService.setFavorite({user_id: vm.user.id, story_id: vm.story.id, boolean: false}).then(() => {})

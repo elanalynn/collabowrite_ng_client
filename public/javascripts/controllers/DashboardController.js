@@ -1,6 +1,7 @@
 function DashboardController($state, userService, storyService, chapterService, favoriteService, pendingService) { //pendingService
   var vm = this
   vm.chapters = []
+  vm.favorites = []
 
   vm.getState = path => {
     if (path === $state.current.url) return {active: true}
@@ -31,10 +32,14 @@ function DashboardController($state, userService, storyService, chapterService, 
         })
       }),
       // get user favorites
-      favoriteService.getFavoritesByUser(userId).then(favorites => vm.favorites = favorites),
+      favoriteService.getFavoritesByUser(userId)
+      .then(record => record.data.map(record => record.story_id))
+      .then(storyIds => {
+        storyIds.forEach(id => storyService.getStory(id).then(story => vm.favorites.push(story.data)))
+      }),
       // get pending
-      pendingService.getPendingMyApproval(userId).then(pending => vm.pendingMyApproval = pending),
-      pendingService.getPendingOtherApproval(userId).then(pending => vm.pendingOtherApproval = pending),
+      // pendingService.getPendingMyApproval(userId).then(pending => vm.pendingMyApproval = pending),
+      // pendingService.getPendingOtherApproval(userId).then(pending => vm.pendingOtherApproval = pending),
     ])
     .then(data => console.log('data', data))
   })
