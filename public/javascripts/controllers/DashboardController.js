@@ -1,8 +1,9 @@
-function DashboardController($state, userService, storyService, chapterService, favoriteService, pendingService) { //pendingService
+function DashboardController($state, userService, storyService, chapterService, favoriteService) { //pendingService
   var vm = this
   vm.chapters = []
   vm.favorites = []
 
+  // add active class on dashboard tabs
   vm.getState = path => {
     if (path === $state.current.url) return {active: true}
   }
@@ -38,15 +39,14 @@ function DashboardController($state, userService, storyService, chapterService, 
         storyIds.forEach(id => storyService.getStory(id).then(story => vm.favorites.push(story.data)))
       }),
       // get pending
-      pendingService.getPendingChapters(userId, 'others').then(pending => {
-        vm.othersPending = pending
-        console.log('others', vm.othersPending)
-      }),
-      pendingService.getPendingChapters(userId, 'mine').then(pending => {
-        vm.myPending = pending
-        console.log('my', vm.myPending)
-      }),
+      // pendingService.getPendingChapters(userId, 'others').then(pending => {
+      //   vm.othersPending = pending
+      //   console.log('others', vm.othersPending)
+      // }),
+      // pendingService.getPendingChapters(userId, 'mine').then(pending => {
+      //   vm.myPending = pending
+      //   console.log('my', vm.myPending)
+      // }),
     ])
-    .then(data => console.log('data', data))
   })
 }
