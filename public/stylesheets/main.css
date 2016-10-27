@@ -212,7 +212,8 @@ footer {
   max-height: 300px; }
 
 .demo-card-square > .mdl-card__title {
-  color: #fff; }
+  color: #fff;
+  height: 200px; }
 
 .cw-story-cover {
   width: 100%;
