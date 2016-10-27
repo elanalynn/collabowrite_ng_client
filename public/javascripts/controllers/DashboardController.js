@@ -38,8 +38,14 @@ function DashboardController($state, userService, storyService, chapterService, 
         storyIds.forEach(id => storyService.getStory(id).then(story => vm.favorites.push(story.data)))
       }),
       // get pending
-      // pendingService.getPendingMyApproval(userId).then(pending => vm.pendingMyApproval = pending),
-      // pendingService.getPendingOtherApproval(userId).then(pending => vm.pendingOtherApproval = pending),
+      pendingService.getPendingChapters(userId, 'others').then(pending => {
+        vm.othersPending = pending
+        console.log('others', vm.othersPending)
+      }),
+      pendingService.getPendingChapters(userId, 'mine').then(pending => {
+        vm.myPending = pending
+        console.log('my', vm.myPending)
+      }),
     ])
     .then(data => console.log('data', data))
   })

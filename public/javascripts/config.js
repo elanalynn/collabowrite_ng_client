@@ -1,4 +1,4 @@
-function config($stateProvider, $urlRouterProvider) {
+function config($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/')
   $stateProvider
   .state('home', {
@@ -100,5 +100,9 @@ function config($stateProvider, $urlRouterProvider) {
     templateUrl: '../partials/users/profile.html',
     controller: 'UserController',
     controllerAs: 'vm',
+  })
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false,
   })
 }
