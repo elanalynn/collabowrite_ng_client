@@ -3,7 +3,8 @@ function MainController(userService) {
 
   userService.getLoggedInUser()
   .then(user => {
-    if (!user) return null
+    console.log('get user service', user)
+    if (!user.data) return null
     else return user.data.user.id
   })
   .then(userId => userService.getUser(userId).then(user => vm.user = user.data))
