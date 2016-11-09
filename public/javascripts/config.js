@@ -1,4 +1,7 @@
-function config($stateProvider, $urlRouterProvider) { //$locationProvider
+// config.$inject = []
+
+function config($stateProvider, $urlRouterProvider, $httpProvider) { //$locationProvider
+  $httpProvider.defaults.withCredentials = true
   $urlRouterProvider.otherwise('/')
   $stateProvider
   .state('home', {
