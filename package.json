@@ -1,5 +1,5 @@
 {
-  "name": "Collabowrite Angular Client",
+  "name": "collabowrite_client",
   "version": "1.0.0",
   "description": "collabowrite client built with angular",
   "main": "app.js",
