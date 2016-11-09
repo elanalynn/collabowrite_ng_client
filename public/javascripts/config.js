@@ -1,4 +1,4 @@
-// config.$inject = []
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider']
 
 function config($stateProvider, $urlRouterProvider, $httpProvider) { //$locationProvider
   $httpProvider.defaults.withCredentials = true
