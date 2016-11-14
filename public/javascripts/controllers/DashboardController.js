@@ -1,4 +1,4 @@
-function DashboardController($state, userService, storyService, chapterService, favoriteService) { //pendingService
+function DashboardController($state, authService, userService, storyService, chapterService, favoriteService) { //pendingService
   var vm = this
   vm.chapters = []
   vm.favorites = []
@@ -8,7 +8,7 @@ function DashboardController($state, userService, storyService, chapterService, 
     if (path === $state.current.url) return {active: true}
   }
 
-  userService.getLoggedInUser()
+  authService.isAuthenticated()
   .then(user => {
     if (!user) return null
     else return user.data.user.id

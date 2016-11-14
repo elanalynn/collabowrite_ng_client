@@ -1,7 +1,7 @@
-function UserController($stateParams, $location, userService) {
+function UserController($stateParams, $location, authService, userService) {
   const vm = this
 
-  userService.getLoggedInUser().then(user => vm.user = user)
+  authService.isAuthenticated().then(user => vm.user = user)
   userService.getProfiles().then(profiles => vm.profiles = profiles.data)
 
   if ($stateParams.id) userService.getProfile($stateParams.id).then(profile => vm.profile = profile.data)

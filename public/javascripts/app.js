@@ -11,3 +11,4 @@ angular
   .factory('chapterService', chapterService)
   .factory('storyService', storyService)
   .factory('userService', userService)
+  .factory('authService', authService)

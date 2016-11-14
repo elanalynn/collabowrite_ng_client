@@ -1,7 +1,7 @@
-function MainController(userService) {
+function MainController(authService, userService) {
   const vm = this
 
-  userService.getLoggedInUser()
+  authService.isAuthenticated()
   .then(data => {
     if (!data.data.user) return null
     else return data.data.user.id
