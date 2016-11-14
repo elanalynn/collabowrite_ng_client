@@ -24,7 +24,7 @@ function ChapterController($stateParams, $location, userService, storyService, c
 
   vm.createChapter = chapter => {
     const newChapter = chapter
-    userService.getLoggedInUser()
+    userService.isAuthenticated()
     .then(user => {
       newChapter.story_id = vm.story.id
       newChapter.user_id = user.data.user.id

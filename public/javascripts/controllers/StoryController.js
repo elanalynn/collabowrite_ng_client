@@ -1,7 +1,7 @@
-function StoryController($stateParams, $location, userService,  storyService, chapterService, favoriteService) {
+function StoryController($stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
   const vm = this
 
-  userService.getLoggedInUser().then(user => vm.user = user.data.user)
+  authService.isAuthenticated().then(user => vm.user = user.data.user)
 
   storyService.getStories().then(stories => {
     vm.stories = stories.data.data
@@ -28,7 +28,7 @@ function StoryController($stateParams, $location, userService,  storyService, ch
 
   vm.createStory = story => {
     const newStory = story
-    userService.getLoggedInUser()
+    authService.isAuthenticated()
     .then(user => newStory.user_id = user.data.user.id)
     .then(() => storyService.createStory(newStory))
     .then(response => $location.url(`/stories/${response.data.id}`))
