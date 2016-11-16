@@ -1,0 +1,3 @@
+'use strict';
+
+angular.module('collabowrite', ['ui.router', 'ngAnimate']).config(config).controller('ApplicationController', ApplicationController).controller('ChapterController', ChapterController).controller('StoryController', StoryController).controller('UserController', UserController).controller('DashboardController', DashboardController).factory('pendingService', pendingService).factory('favoriteService', favoriteService).factory('chapterService', chapterService).factory('storyService', storyService).factory('userService', userService).factory('authService', authService);

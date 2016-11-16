@@ -1,4 +1,6 @@
-function DashboardController($state, authService, userService, storyService, chapterService, favoriteService) { //pendingService
+DashboardController.$inject = ['$state', '$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService']
+
+function DashboardController($state, $stateParams, $location, authService, userService, storyService, chapterService, favoriteService) { //pendingService
   var vm = this
   vm.chapters = []
   vm.favorites = []
@@ -11,14 +13,16 @@ function DashboardController($state, authService, userService, storyService, cha
   authService.isAuthenticated()
   .then(user => {
     if (!user) return null
-    else return user.data.user.id
+    else return user.data.id
   })
   .then(userId => {
     Promise.all([
       // get user
-      userService.getUser(userId).then(user => vm.user = user.data),
+      userService.getUser(userId)
+      .then(user => vm.user = user.data),
       // get user stories
-      storyService.getUserStories(userId).then(stories => {
+      storyService.getUserStories(userId)
+      .then(stories => {
         vm.stories = stories.data.data
         return vm.stories.map(story => story.storyId)
       })
@@ -36,7 +40,8 @@ function DashboardController($state, authService, userService, storyService, cha
       favoriteService.getFavoritesByUser(userId)
       .then(record => record.data.map(record => record.story_id))
       .then(storyIds => {
-        storyIds.forEach(id => storyService.getStory(id).then(story => vm.favorites.push(story.data)))
+        storyIds.forEach(id => storyService.getStory(id)
+        .then(story => vm.favorites.push(story.data)))
       }),
       // get pending
       // pendingService.getPendingChapters(userId, 'others').then(pending => {
@@ -49,4 +54,15 @@ function DashboardController($state, authService, userService, storyService, cha
       // }),
     ])
   })
+
+  if ($stateParams.id) {
+    authService.isAuthorized($stateParams.id)
+    .then(data => {
+      console.log(data)
+      if (!data.data.authorization) {
+        console.log('Not authorized!')
+        $location.url('/')
+      }
+    })
+  }
 }

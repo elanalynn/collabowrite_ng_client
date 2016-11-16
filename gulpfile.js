@@ -1,13 +1,15 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
+const babel = require('gulp-babel')
 const concat = require('gulp-concat')
 const minify = require('gulp-minify')
 
-gulp.task('default', ['watch'])
+gulp.task('default', ['styles', 'babel', 'minify', 'watch'])
 
 gulp.task('watch', function() {
   gulp.watch('./src/scss/*.scss', ['styles'])
-  gulp.watch('./src/javascripts/**/*.js', ['scripts'])
+  gulp.watch('./src/javascripts/*.js', ['babel'])
+  gulp.watch('./src/javascripts/*.js', ['minify'])
 })
 
 gulp.task('styles', () => {
@@ -16,9 +18,15 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('./public/stylesheets/'))
 })
 
-gulp.task('scripts', function() {
-  gulp.src('./src/javascripts/*.js')
-    .pipe(concat('scripts.min.js'))
+gulp.task('babel', function(){
+  return gulp.src('./src/**/*.js')
+    .pipe(babel({presets: ['es2015']}))
+    .pipe(gulp.dest('./src/babel_build/'))
+})
+
+gulp.task('minify', function() {
+  gulp.src('./src/babel_build/**/*.js')
+    .pipe(concat('scripts.js'))
     .pipe(minify())
-    .pipe(gulp.dest('./public//'))
+    .pipe(gulp.dest('./public/javascripts/'))
 })

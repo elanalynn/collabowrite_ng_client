@@ -1,7 +1,7 @@
 angular
   .module('collabowrite', ['ui.router', 'ngAnimate'])
   .config(config)
-  .controller('MainController', MainController)
+  .controller('ApplicationController', ApplicationController)
   .controller('ChapterController', ChapterController)
   .controller('StoryController', StoryController)
   .controller('UserController', UserController)

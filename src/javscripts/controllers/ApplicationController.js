@@ -1,4 +1,6 @@
-function MainController(authService, userService) {
+ApplicationController.$inject = ['authService', 'userService']
+
+function ApplicationController(authService, userService) {
   const vm = this
 
   authService.isAuthenticated()

@@ -1,3 +1,5 @@
+storyService.$inject = ['$http']
+
 function storyService($http){
 
   let service = {}

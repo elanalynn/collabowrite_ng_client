@@ -1,3 +1,5 @@
+UserController.$inject = ['$stateParams', '$location', 'authService', 'userService']
+
 function UserController($stateParams, $location, authService, userService) {
   const vm = this
 

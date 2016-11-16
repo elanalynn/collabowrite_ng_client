@@ -1,3 +1,5 @@
+favoriteService.$inject = ['$http']
+
 function favoriteService($http){
 
   let service = {}

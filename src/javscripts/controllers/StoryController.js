@@ -1,3 +1,5 @@
+StoryController.$inject = ['$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService']
+
 function StoryController($stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
   const vm = this
 

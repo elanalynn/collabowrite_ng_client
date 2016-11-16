@@ -1,4 +1,6 @@
-function ChapterController($stateParams, $location, userService, storyService, chapterService) {
+ChapterController.$inject = ['$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService']
+
+function ChapterController($stateParams, $location, authService, userService, storyService, chapterService) {
   const vm = this
 
   if ($stateParams.storyId) {
@@ -24,7 +26,7 @@ function ChapterController($stateParams, $location, userService, storyService, c
 
   vm.createChapter = chapter => {
     const newChapter = chapter
-    userService.isAuthenticated()
+    authService.isAuthenticated()
     .then(user => {
       newChapter.story_id = vm.story.id
       newChapter.user_id = user.data.user.id

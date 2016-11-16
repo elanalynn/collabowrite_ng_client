@@ -1,3 +1,5 @@
+chapterService.$inject = ['$http']
+
 function chapterService($http){
 
   let service = {}

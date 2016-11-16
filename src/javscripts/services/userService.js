@@ -1,7 +1,9 @@
+userService.$inject = ['$http']
+
 function userService($http){
+
   let service = {}
 
-  // service.getLoggedInUser = () => $http.get('http://localhost:3000/api/v1/auth/')
   service.findOrCreate = user => $http.post('http://localhost:3000/api/v1/users/', user)
   service.getProfiles = () => $http.get('http://localhost:3000/api/v1/users')
   service.getProfile = id => $http.get(`http://localhost:3000/api/v1/users/${id}`)
