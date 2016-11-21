@@ -1,6 +1,7 @@
 <h3>Stories</h3>
 <ul>
   <section ng-repeat="story in vm.stories">
-    <li><a ui-sref="story_detail({id: story.id})">{{story.title}}</a> <span>(Genre: {{story.genre}})</span></li>
+
+    <li><a ui-sref="story_detail({id: story.storyId})">{{story.title}}</a> <span>(Genre: {{story.genre}})</span></li>
   </section>
 </ul>

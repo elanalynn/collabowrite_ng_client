@@ -30,7 +30,7 @@ function DashboardController($state, $stateParams, $location, authService, userS
           vm.user = user.data
         }),
         // get user stories
-        storyService.getUserStories(userId)
+        storyService.getStoriesByUser(userId)
         .then(stories => {
           vm.stories = stories.data.data
           return vm.stories.map(story => story.storyId)
@@ -38,7 +38,7 @@ function DashboardController($state, $stateParams, $location, authService, userS
         // get user story chapters
         .then(storyIds => {
           storyIds.map(id => {
-          chapterService.getChapters(id).then(chapters => {
+          chapterService.getChaptersByStory(id).then(chapters => {
             chapters.data.data.forEach(chapter => {
               vm.chapters.push(chapter)
               })
