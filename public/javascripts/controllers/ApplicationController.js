@@ -16,9 +16,10 @@ function ApplicationController($stateParams, authService, userService, $rootScop
     else return data.data.user.id
   })
   .then(userId => {
-    userService.getUser(userId).then(user => {
-      vm.user = user.data
-      console.log(vm.user)
-    })
+    if (userId) {
+      userService.getUser(userId).then(user => {
+        vm.user = user.data
+      })
+    }
   })
 }
