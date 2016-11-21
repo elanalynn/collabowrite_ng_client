@@ -24,7 +24,7 @@
             <a ui-sref-active="active" href="/#about">About</a>
             <a ui-sref-active="active" href="/#guidelines">Guidelines</a>
             <a ui-sref-active="active" ui-sref="stories">Browse</a>
-            <a ng-show="!vm.user" href="http://localhost:3000/api/v1/auth/twitter">Login</a>
+            <a href="http://localhost:3000/api/v1/auth/twitter" ng-show="!vm.user">Login</a>
             <a ng-show="vm.user">
               <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
                 <img ng-src="{{vm.user.avatar}}" class="cw-circle-small" alt="avatar" />
@@ -55,7 +55,22 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
-  <script type="text/javascript" src="/javascripts/scripts-min.js"></script>
+  <!-- <script type="text/javascript" src="/javascripts/scripts-min.js"></script> -->
+  <script type="text/javascript" src="javascripts/services/authService.js"></script>
+  <script type="text/javascript" src="javascripts/services/chapterService.js"></script>
+  <script type="text/javascript" src="javascripts/services/favoriteService.js"></script>
+  <script type="text/javascript" src="javascripts/services/pendingService.js"></script>
+  <script type="text/javascript" src="javascripts/services/sessionService.js"></script>
+  <script type="text/javascript" src="javascripts/services/storyService.js"></script>
+  <script type="text/javascript" src="javascripts/services/userService.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/ApplicationController.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/ChapterController.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/DashboardController.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/StoryController.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/UserController.js"></script>
+  <script type="text/javascript" src="javascripts/controllers/UserController.js"></script>
+  <script type="text/javascript" src="javascripts/config.js"></script>
+  <script type="text/javascript" src="javascripts/app.js"></script>
 
 </body>
 </html>

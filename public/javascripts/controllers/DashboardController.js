@@ -10,25 +10,24 @@ function DashboardController($state, $stateParams, $location, authService, userS
     if (path === $state.current.url) return {active: true}
   }
 
-  console.log($stateParams.id)
-  authService.isAuthorized($stateParams.id)
-  .then(data => {
-    if (!data.data.authorized) {
-      console.log('Not authorized!!')
-      $location.url('/')
-    }
-  })
+  // console.log($stateParams.id)
+  // authService.isAuthorized($stateParams.id)
+  // .then(data => {
+  //   console.log('authorization data', data.data.authorized)
+  //   if (!data.data.authorized) {
+  //     console.log('Not authorized!!')
+  //     $location.url('/')
+  //   }
+  // })
 
-  authService.getCurrentUser()
-  .then(user => {
-    if (!user) return null
-    else return user.data.id
+  authService.getCurrentUser().then(data => {
+    if (!data.data.user) return null
+    else return data.data.user.id
   })
   .then(userId => {
     Promise.all([
       // get user
-      userService.getUser(userId)
-      .then(user => {
+      userService.getUser(userId).then(user => {
         vm.user = user.data
       }),
       // get user stories

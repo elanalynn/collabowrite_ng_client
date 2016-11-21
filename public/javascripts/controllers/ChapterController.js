@@ -26,12 +26,13 @@ function ChapterController($stateParams, $location, authService, userService, st
 
   vm.createChapter = chapter => {
     const newChapter = chapter
-    authService.isAuthenticated()
+    authService.getCurrentUser()
     .then(user => {
       newChapter.story_id = vm.story.id
       newChapter.user_id = user.data.user.id
       return chapterService.createChapter(newChapter)
       .then(chapter => {
+        console.log(chapter)
         $location.url(`/stories/${chapter.story_id}`)
       })
     })

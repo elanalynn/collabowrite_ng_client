@@ -5,14 +5,6 @@ const babel = require('gulp-babel')
 const concat = require('gulp-concat')
 const minify = require('gulp-minify')
 
-gulp.task('default', ['styles', 'scripts', 'watch'])
-
-gulp.task('watch', function() {
-  gulp.watch('./src/scss/*.scss', ['styles'])
-  gulp.watch('./src/javascripts/*.js', ['babel'])
-  gulp.watch('./src/javascripts/*.js', ['minify'])
-})
-
 gulp.task('styles', () => {
   gulp.src('./src/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -27,3 +19,11 @@ gulp.task('scripts', function() {
     .pipe(minify())
     .pipe(gulp.dest('./public/javascripts/'))
 })
+
+gulp.task('watch', function() {
+  gulp.watch('./src/scss/*.scss', ['styles'])
+  gulp.watch('./src/javascripts/**/*.js', ['babel'])
+  gulp.watch('./src/javascripts/**/*.js', ['minify'])
+})
+
+gulp.task('default', ['styles', 'scripts'])

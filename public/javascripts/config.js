@@ -1,4 +1,4 @@
-config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider']
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider']
 
 function config($stateProvider, $urlRouterProvider, $httpProvider) { //$locationProvider
   $httpProvider.defaults.withCredentials = true
@@ -7,6 +7,8 @@ function config($stateProvider, $urlRouterProvider, $httpProvider) { //$location
   .state('home', {
     url: '/',
     templateUrl: '../partials/home.html',
+    controller: 'ApplicationController',
+    controllerAs: 'vm',
   })
   .state('dashboard', {
     url: '/users/:id',
