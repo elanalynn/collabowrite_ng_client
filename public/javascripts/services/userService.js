@@ -8,7 +8,7 @@ function userService($http){
   service.getProfiles = () => $http.get('http://localhost:3000/api/v1/users')
   service.getProfile = id => $http.get(`http://localhost:3000/api/v1/users/${id}`)
   service.getUser = id => $http.get(`http://localhost:3000/api/v1/users/${id}`)
-  service.updateUser = (id, user) => $http.put(`http://localhost:3000/api/v1/users/${id}`, user)
+  service.updateUser = user => $http.put(`http://localhost:3000/api/v1/users/${user.id}`, user)
   service.deactivateUser = id => $http.put(`http://localhost:3000/api/v1/users/${id}`, {isActive: false})
   service.banUser = id => $http.put(`http://localhost:3000/api/v1/users/${id}`, {isBanned: true})
 

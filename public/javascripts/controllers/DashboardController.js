@@ -10,10 +10,8 @@ function DashboardController($state, $stateParams, $location, authService, userS
     if (path === $state.current.url) return {active: true}
   }
 
-  console.log($stateParams.id)
   authService.isAuthorized($stateParams.id)
   .then(data => {
-    console.log('authorization data', data.data.authorized)
     if (!data.data.authorized) {
       console.log('Not authorized!!')
       $location.url('/')
@@ -65,5 +63,12 @@ function DashboardController($state, $stateParams, $location, authService, userS
         // }),
       ])
     })
-  }  
+  }
+
+  vm.updateProfile = user => {
+    userService.updateUser(user)
+    .then(userId => {
+      $state.go('dashboard.profile')
+    })
+  }
 }
