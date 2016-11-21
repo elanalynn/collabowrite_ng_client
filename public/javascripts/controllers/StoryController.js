@@ -30,7 +30,7 @@ function StoryController($stateParams, $location, authService, userService,  sto
 
   vm.createStory = story => {
     const newStory = story
-    authService.isAuthenticated()
+    authService.getCurrentUser()
     .then(user => newStory.user_id = user.data.user.id)
     .then(() => storyService.createStory(newStory))
     .then(response => $location.url(`/stories/${response.data.id}`))
