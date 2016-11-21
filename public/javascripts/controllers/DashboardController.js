@@ -67,8 +67,15 @@ function DashboardController($state, $stateParams, $location, authService, userS
 
   vm.updateProfile = user => {
     userService.updateUser(user)
-    .then(userId => {
+    .then(() => {
       $state.go('dashboard.profile')
+    })
+  }
+
+  vm.deactivateUser = id => {
+    userService.deactivateUser(id)
+    .then(() => {
+      $state.go('home')
     })
   }
 }
