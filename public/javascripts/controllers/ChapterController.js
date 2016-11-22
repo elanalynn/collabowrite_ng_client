@@ -32,8 +32,6 @@ function ChapterController($stateParams, $location, authService, userService, st
       newChapter.user_id = user.data.user.id
       return chapterService.createChapter(newChapter)
       .then(response => {
-        console.log(response)
-        console.log(response.data.id)
         $location.url(`/stories/${response.data.id}`)
       })
     })

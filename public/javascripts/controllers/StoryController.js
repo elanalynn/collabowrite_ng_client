@@ -3,7 +3,15 @@ StoryController.$inject = ['$stateParams', '$location', 'authService', 'userServ
 function StoryController($stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
   const vm = this
 
-  authService.getCurrentUser().then(user => vm.user = user.data.user)
+  vm.user = null
+
+  authService.getCurrentUser().then(user => {
+    vm.user = user.data.user
+    authService.isAuthorized($stateParams.id)
+    .then(response => {
+      vm.isAuthorized = response.data.authorized
+    })
+  })
 
   storyService.getStories().then(stories => {
     vm.stories = stories.data.data
@@ -34,6 +42,10 @@ function StoryController($stateParams, $location, authService, userService,  sto
     .then(user => newStory.user_id = user.data.user.id)
     .then(() => storyService.createStory(newStory))
     .then(response => $location.url(`/stories/${response.data.id}`))
+  }
+
+  vm.updateStory = () => {
+
   }
 
   vm.favorite = false
