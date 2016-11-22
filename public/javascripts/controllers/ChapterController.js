@@ -7,7 +7,7 @@ function ChapterController($stateParams, $location, authService, userService, st
     storyService.getStory($stateParams.storyId)
     .then(story => vm.story = story.data)
 
-    chapterService.getChapters($stateParams.storyId).then(chapters => {
+    chapterService.getChaptersByStory($stateParams.storyId).then(chapters => {
       vm.chapters = chapters.data.data
       vm.last_chapter = vm.chapters[vm.chapters.length - 1]
     })
@@ -31,9 +31,10 @@ function ChapterController($stateParams, $location, authService, userService, st
       newChapter.story_id = vm.story.id
       newChapter.user_id = user.data.user.id
       return chapterService.createChapter(newChapter)
-      .then(chapter => {
-        console.log(chapter)
-        $location.url(`/stories/${chapter.story_id}`)
+      .then(response => {
+        console.log(response)
+        console.log(response.data.id)
+        $location.url(`/stories/${response.data.id}`)
       })
     })
   }

@@ -18,7 +18,7 @@ function StoryController($stateParams, $location, authService, userService,  sto
     .then(story => Promise.all([
       userService.getUser(story.user_id),
       storyService.getGenre(story.genre_id),
-      chapterService.getChapters(story.id),
+      chapterService.getChaptersByStory(story.id),
     ]))
     .then(details => {
       vm.story.user = `${details[0].data.first_name} ${details[0].data.last_name}`

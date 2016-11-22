@@ -26,4 +26,4 @@ gulp.task('watch', function() {
   gulp.watch('./src/javascripts/**/*.js', ['minify'])
 })
 
-gulp.task('default', ['styles', 'scripts'])
+gulp.task('default', ['watch', 'styles', 'scripts'])
