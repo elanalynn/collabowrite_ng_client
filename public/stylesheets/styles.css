@@ -368,6 +368,39 @@ textarea,
 .cw-bg-danger {
   background-color: #db078d;
 }
+
+.cw-button-delete {
+  margin-top: 100px;
+}
+
+.cw-dialog {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.cw-dialog .cw-ngdialog-close {
+  font-size: 2em;
+  padding: 10px;
+}
+
+.cw-dialog h2 {
+  color: #004efb;
+  font-size: 2.5em;
+}
+
+.cw-dialog p,
+.cw-dialog .p-font {
+  color: #333;
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 1.5em;
+}
+
+.cw-dialog .cw-dialog-buttons {
+  margin: -10px 20px;
+}
 .error {
   color: #ed0b4f;
   align-self: flex-start;

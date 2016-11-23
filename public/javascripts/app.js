@@ -1,5 +1,5 @@
 angular
-  .module('collabowrite', ['ui.router', 'ngAnimate'])
+  .module('collabowrite', ['ui.router', 'ngAnimate', 'ngDialog'])
   .config(config)
   .controller('ApplicationController', ApplicationController)
   .controller('ChapterController', ChapterController)

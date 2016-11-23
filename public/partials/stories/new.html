@@ -18,7 +18,7 @@
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" name="summary" ng-model="vm.story.summary" ng-focus="focus" ng-minlength=40 ng-maxlength=140 required>
-            <label class="mdl-textfield__label">Summary</label>
+            <label class="active mdl-textfield__label">Summary</label>
             <small class="error" ng-show="newStoryForm.summary.$error.minlength && newStoryForm.summary.$touched && !focus">
               The summary must be at least 40 characters long.
             </small>
@@ -27,8 +27,8 @@
             </small>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="active mdl-textfield__label">Cover Image (paste link)</label>
             <input class="mdl-textfield__input" name="cover" type="text" ng-model="vm.story.cover" ng-focus="focus" ng-minlength=10 required>
-            <label class="mdl-textfield__label">Cover Image (paste link)</label>
           </div>
           <label for="genre">Genre</label>
           <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">

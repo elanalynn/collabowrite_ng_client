@@ -1,6 +1,6 @@
-StoryController.$inject = [ '$state','$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService']
+StoryController.$inject = [ '$state','$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService', 'ngDialog']
 
-function StoryController($state, $stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
+function StoryController($state, $stateParams, $location, authService, userService,  storyService, chapterService, favoriteService, ngDialog) {
   const vm = this
 
   vm.user = null
@@ -73,6 +73,19 @@ function StoryController($state, $stateParams, $location, authService, userServi
 
   vm.updateStory = id => {
     storyService.updateStory(id)
+    .then(id => id)
+  }
+
+  vm.deleteStoryPopup = () => {
+    ngDialog.open({
+      template: '/partials/stories/deleteStoryPopup.html',
+      controller: 'StoryController',
+      controllerAs: 'vm',
+    })
+  }
+
+  vm.deleteStory = id => {
+    storyService.deleteStory(id)
     .then(id => id)
   }
 
