@@ -7,7 +7,7 @@
         <section>
           <a ng-click="vm.favoriteToggle()"><i ng-show="!vm.favorite && !vm.isAuthorized && vm.user" class="material-icons cw-favorite">favorite_border</i></a>
           <a ng-click="vm.favoriteToggle()"><i ng-show="vm.favorite && !vm.isAuthorized && vm.user" class="material-icons cw-favorite">favorite</i></a>
-          <a ng-click="vm.editStory()"><i ng-show="vm.isAuthorized" class="material-icons cw-favorite">mode_edit</i></a>
+          <a ui-sref="story_edit({id: vm.story.id})"><i ng-show="vm.isAuthorized" class="material-icons cw-favorite">mode_edit</i></a>
         </section>
       </div>
       <div class="mdl-card__supporting-text">

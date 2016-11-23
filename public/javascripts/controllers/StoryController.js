@@ -1,23 +1,28 @@
-StoryController.$inject = ['$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService']
+StoryController.$inject = [ '$state','$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService']
 
-function StoryController($stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
+function StoryController($state, $stateParams, $location, authService, userService,  storyService, chapterService, favoriteService) {
   const vm = this
 
   vm.user = null
+  vm.favorite = null
 
   authService.getCurrentUser().then(user => {
     vm.user = user.data.user
-    authService.isAuthorized($stateParams.id)
-    .then(response => {
-      vm.isAuthorized = response.data.authorized
+    if ($stateParams.id) {
+      authService.isAuthorized($stateParams.id)
+      .then(response => {
+        vm.isAuthorized = response.data.authorized
+      })
+    }
+  })
+
+  if ($state.current.name === 'stories') {
+    storyService.getStories().then(stories => {
+      vm.stories = stories.data.data
     })
-  })
+  }
 
-  storyService.getStories().then(stories => {
-    vm.stories = stories.data.data
-  })
-
-  if ($stateParams.id) {
+  if ($state.current.name === 'story_detail') {
     storyService.getStory($stateParams.id)
     .then(story => {
       vm.story = story.data
@@ -36,27 +41,58 @@ function StoryController($stateParams, $location, authService, userService,  sto
     })
   }
 
-  vm.createStory = story => {
-    const newStory = story
-    authService.getCurrentUser()
-    .then(user => newStory.user_id = user.data.user.id)
-    .then(() => storyService.createStory(newStory))
-    .then(response => $location.url(`/stories/${response.data.id}`))
+  if ($state.current.name === 'story_new') {
+    vm.story = {}
+    storyService.getGenres()
+    .then(genres => {
+      vm.genres = genres.data
+      vm.story.genre_id = vm.genres[0]
+    })
+
+    vm.createStory = story => {
+      const newStory = story
+      authService.getCurrentUser()
+      .then(user => newStory.user_id = user.data.user.id)
+      .then(() => storyService.createStory(newStory))
+      .then(response => $location.url(`/stories/${response.data.id}`))
+    }
   }
 
-  vm.updateStory = () => {
+  if ($state.current.name === 'story_edit') {
 
+    storyService.getStory($stateParams.id)
+    .then(story => {
+      storyService.getGenres()
+      .then(genres => {
+        vm.story = story.data
+        vm.genres = genres.data
+        vm.story.genre_id = vm.genres[0]
+      })
+    })
   }
 
-  vm.favorite = false
+  vm.updateStory = id => {
+    storyService.updateStory(id)
+    .then(id => id)
+  }
 
   vm.favoriteToggle = () => {
     if (vm.favorite === true) {
       vm.favorite = false
-      favoriteService.setFavorite({user_id: vm.user.id, story_id: vm.story.id, boolean: false}).then(() => {})
+      favoriteService.setFavorite({
+        user_id: vm.user.id,
+        story_id: vm.story.id,
+        boolean: false,
+      })
+      .then(() => {})
     } else {
       vm.favorite = true
-      favoriteService.setFavorite({user_id: vm.user.id, story_id: vm.story.id, boolean: true}).then(() => {})
+      favoriteService.setFavorite({
+        user_id: vm.user.id,
+        story_id: vm.story.id,
+        boolean: true,
+      })
+      .then(() => {})
     }
   }
 }

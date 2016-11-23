@@ -32,19 +32,9 @@
           </div>
           <label for="genre">Genre</label>
           <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-            <select class="mdl-selectfield__select" ng-model="vm.story.genre_id" required>
-              <option selected value="1">Let's see what happens!</option>
-              <option value="2">Children's</option>
-              <option value="3">Comedy</option>
-              <option value="4">Drama</option>
-              <option value="5">Fantasy</option>
-              <option value="6">Historical Fiction</option>
-              <option value="7">Horror</option>
-              <option value="8">Mystery</option>
-              <option value="9">Romance</option>
-              <option value="10">Satire</option>
-              <option value="11">Tragedy</option>
-            </select>
+            <select class="mdl-selectfield__select" id="genre"
+              ng-options="genre as genre.genre for genre in vm.genres"
+              ng-model="vm.story.genre_id"></select>
           </div>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent cw-form-button" type="submit">
             Go!
