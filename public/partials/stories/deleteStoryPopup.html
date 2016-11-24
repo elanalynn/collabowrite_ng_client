@@ -1,16 +1,15 @@
 <div id="ngdialog2" class="ngdialog cw-dialog">
-  <div class="ngdialog-overlay"></div>
-  <div class="ngdialog-content">
+  <div class="ngdialog-content cw-ngdialog-content">
     <div class="ngdialog-close cw-ngdialog-close"></div>
 		<div class="ngdialog-message">
-      <h3>Are you sure you want to delete...</h3>
+      <h4>Are you sure you want to delete...</h4>
 			<h2>{{vm.story.title}}<span class="p-font">?</span></h2>
 			<p>This action is not reversible.</p>
-  		<div class="ngdialog-buttons mt cw-dialog-buttons">
-  			<button ng-show="vm.isAuthorized" ng-click="vm.deleteStoryPopup(vm.story.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Never mind. I'll hold off.</button>
-        <button ng-show="vm.isAuthorized" ng-click="vm.deleteStoryPopup(vm.story.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete {{vm.story.title}}</button>
+  		<div class="ngdialog-buttons mt cw-ngdialog-buttons">
+  			<button ng-show="vm.isAuthorized" ng-click="vm.deleteStoryPopup(vm.story.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Never mind</button>
+        <button ng-show="vm.isAuthorized" ng-click="vm.deleteStoryPopup(vm.story.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete</button>
   		</div>
     </div>
-
   </div>
+  <div class="ngdialog-overlay"></div>
 </div>

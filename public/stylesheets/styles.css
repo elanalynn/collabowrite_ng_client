@@ -375,9 +375,16 @@ textarea,
 
 .cw-dialog {
   width: 100%;
+  height: 100%;
   padding: 100px;
   display: flex;
   justify-content: center;
+}
+
+.cw-dialog .cw-ngdialog-content {
+  padding: 20px;
+  height: 400px;
+  z-index: 1000;
 }
 
 .cw-dialog .cw-ngdialog-close {
@@ -398,8 +405,14 @@ textarea,
   font-size: 1.5em;
 }
 
-.cw-dialog .cw-dialog-buttons {
-  margin: -10px 20px;
+.cw-dialog .cw-ngdialog-buttons {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cw-dialog .cw-ngdialog-buttons button {
+  margin: 10px;
 }
 .error {
   color: #ed0b4f;

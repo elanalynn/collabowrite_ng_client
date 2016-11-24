@@ -371,9 +371,16 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 
 .cw-dialog {
 	width: 100%;
+	height: 100%;
 	padding: 100px;
 	display: flex;
 	justify-content: center;
+
+	.cw-ngdialog-content {
+		padding: 20px;
+		height: 400px;
+		z-index: 1000;
+	}
 
 	.cw-ngdialog-close {
 		font-size: 2em;
@@ -393,7 +400,15 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 
 	}
 
-	.cw-dialog-buttons {
-		margin: -10px 20px;
+	.cw-ngdialog-buttons {
+		align-self: center;
+		display: flex;
+		justify-content: space-around;
+
+		button {
+			margin: 10px;
+		}
 	}
+
+
 }
