@@ -4,7 +4,6 @@ function StoryController($state, $stateParams, $location, authService, userServi
   const vm = this
 
   vm.user = null
-  vm.favorite = null
 
   authService.getCurrentUser().then(user => {
     vm.user = user.data.user
@@ -50,7 +49,12 @@ function StoryController($state, $stateParams, $location, authService, userServi
     })
 
     vm.createStory = story => {
-      const newStory = story
+      const newStory = {
+        title: story.title,
+        summary: story.summary,
+        cover: story.cover,
+        genre_id: story.genre_id.id,
+      }
       authService.getCurrentUser()
       .then(user => newStory.user_id = user.data.user.id)
       .then(() => storyService.createStory(newStory))
@@ -78,7 +82,7 @@ function StoryController($state, $stateParams, $location, authService, userServi
 
   vm.deleteStoryPopup = () => {
     ngDialog.open({
-      template: '/partials/stories/deleteStoryPopup.html',
+      template: '/partials/stories/deletePopup.html',
       controller: 'StoryController',
       controllerAs: 'vm',
     })
