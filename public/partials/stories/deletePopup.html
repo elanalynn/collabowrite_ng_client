@@ -5,9 +5,9 @@
       <h4>Are you sure you want to delete...</h4>
 			<h2>{{vm.story.title}}<span class="p-font">?</span></h2>
 			<p>This action is not reversible.</p>
-  		<div class="ngdialog-buttons mt cw-ngdialog-buttons">
+  		<div ng-click="closeThisDialog()" class="ngdialog-buttons mt cw-ngdialog-buttons">
   			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Never mind</button>
-        <button ng-click="vm.deleteStory(vm.story.id) && closeThisDialog()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete</button>
+        <button ng-click="vm.deleteStory(vm.story.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete</button>
   		</div>
     </div>
   </div>

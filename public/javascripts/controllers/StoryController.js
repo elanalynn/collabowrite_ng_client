@@ -1,7 +1,9 @@
 StoryController.$inject = [ '$state','$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService', 'ngDialog']
 
+
 function StoryController($state, $stateParams, $location, authService, userService,  storyService, chapterService, favoriteService, ngDialog) {
   const vm = this
+  console.log(ngDialog)
 
   vm.user = null
 
@@ -63,7 +65,6 @@ function StoryController($state, $stateParams, $location, authService, userServi
   }
 
   if ($state.current.name === 'story_edit') {
-
     storyService.getStory($stateParams.id)
     .then(story => {
       storyService.getGenres()
