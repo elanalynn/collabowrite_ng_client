@@ -5,10 +5,6 @@ function ApplicationController($stateParams, authService, userService, $rootScop
 
   vm.user = null
   vm.userRoles = USER_ROLES
-  // vm.isAuthorized = authService.isAuthorized()
-  vm.setCurrentUser = user => {
-    vm.user = user
-  }
 
   authService.getCurrentUser().then(data => {
     // $rootScope.$broadcast(AUTH_EVENTS.loginSuccess)
@@ -22,4 +18,10 @@ function ApplicationController($stateParams, authService, userService, $rootScop
       })
     }
   })
+
+
+  vm.setCurrentUser = user => {
+    vm.user = user
+  }
+
 }
