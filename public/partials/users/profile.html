@@ -4,16 +4,16 @@
       <div class="cw-card-large mdl-shadow--2dp">
         <section>
           <ul>
-            <li>First: {{vm.user.first_name}}</li>
-            <li>Last: {{vm.user.last_name}}</li>
-            <li>Handle: {{vm.user.handle}}</li>
-            <li>Location: {{vm.user.location}}</li>
-            <li>CollaboWriter Since: {{vm.user.created_at}}</li>
-            <li>Bio: {{vm.user.bio}}</li>
-            <li>Email: {{vm.user.email}}</li>
+            <li>First: {{vm.profile.first_name}}</li>
+            <li>Last: {{vm.profile.last_name}}</li>
+            <li>Handle: {{vm.profile.handle}}</li>
+            <li>Location: {{vm.profile.location}}</li>
+            <li>CollaboWriter Since: {{vm.profile.created_at}}</li>
+            <li>Bio: {{vm.profile.bio}}</li>
+            <li>Email: {{vm.profile.email}}</li>
             <li>Avatar: </li>
           </ul>
-          <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
+          <img ng-src="{{vm.profile.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
         </section>
     </div>
   </div>

@@ -1,10 +1,8 @@
 StoryController.$inject = [ '$state','$stateParams', '$location', 'authService', 'userService', 'storyService', 'chapterService', 'favoriteService', 'ngDialog']
 
-
 function StoryController($state, $stateParams, $location, authService, userService,  storyService, chapterService, favoriteService, ngDialog) {
-  const vm = this
-  console.log(ngDialog)
 
+  const vm = this
   vm.user = null
 
   authService.getCurrentUser().then(user => {
