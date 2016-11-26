@@ -414,6 +414,13 @@ textarea,
 .cw-dialog .cw-ngdialog-buttons button {
   margin: 10px;
 }
+
+.user-stories {
+  list-style: none;
+  font-size: .8em;
+  line-height: .5em;
+  margin-left: -20px;
+}
 .error {
   color: #ed0b4f;
   align-self: flex-start;

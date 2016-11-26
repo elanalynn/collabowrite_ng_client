@@ -1,6 +1,6 @@
-UserController.$inject = ['$stateParams', '$state', '$location', 'authService', 'userService']
+UserController.$inject = ['$stateParams', '$state', '$location', 'authService', 'userService', 'storyService']
 
-function UserController($stateParams, $state, $location, authService, userService) {
+function UserController($stateParams, $state, $location, authService, userService, storyService) {
 
   const vm = this
 
@@ -13,13 +13,19 @@ function UserController($stateParams, $state, $location, authService, userServic
     userService.getProfiles()
     .then(profiles => {
       vm.profiles = profiles.data
+      vm.profiles.map(profile => {
+        storyService.getStoriesByUser(profile.id)
+        .then(stories => {
+          profile.stories = stories.data.data
+        })
+      })
     })
   }
 
   if ($state.current.name === 'profile') {
     userService.getProfile($stateParams.id)
     .then(profile => {
-      console.log(profile)
+      console.log(profile.data)
       vm.profile = profile.data
     })
   }
