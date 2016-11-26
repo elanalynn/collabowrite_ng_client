@@ -16,10 +16,10 @@ function UserController($stateParams, $state, $location, authService, userServic
       vm.profiles.map(profile => {
         storyService.getStoriesByUser(profile.id)
         .then(stories => {
-          console.log(stories)
           profile.stories = stories.data.data
         })
       })
+      console.log(vm.profiles)
     })
   }
 

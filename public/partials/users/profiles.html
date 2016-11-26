@@ -7,13 +7,15 @@
         <h2 class="mdl-card__title-text">{{profile.first_name}} {{profile.last_name}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
+        <p class="user-preview-header" ng-hide="profile.stories.length > 0">No stories</p>
+        <p class="user-preview-header" ng-show="profile.stories.length > 0">Latest stories...</p>
         <ul class="user-stories" ng-repeat="story in profile.stories">
-          <li>{{story.title}}</li>
+          <li><a ui-sref="story_detail({id: story.id})">{{story.title}}</a></li>
         </ul>
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a ui-sref="profile({id: profile.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Profile
+          Meet {{profile.first_name}}
         </a>
       </div>
     </div>

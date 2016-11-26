@@ -421,6 +421,10 @@ textarea,
   line-height: .5em;
   margin-left: -20px;
 }
+
+.user-preview-header {
+  margin-bottom: -8px;
+}
 .error {
   color: #ed0b4f;
   align-self: flex-start;
