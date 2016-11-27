@@ -20,7 +20,6 @@ function UserController($stateParams, $state, $location, authService, userServic
           profile.stories = stories.data.data
         })
       })
-      console.log(vm.profiles)
     })
   }
 
