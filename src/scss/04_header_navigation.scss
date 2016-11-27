@@ -1,0 +1,49 @@
+// Main header and navigation
+
+.cw-header {
+	color: #fff;
+	background-color: #096afc;
+
+	.mdl-layout__drawer-button {
+	  background-color: rgba(197, 197, 197, 0.8);
+	}
+
+	.cw-navigation-row {
+		display: flex;
+		justify-content: space-between;
+	  background-color: rgba(0, 0, 0, 0.5);
+	  text-transform: uppercase;
+	  height: 50px;
+
+		.cw-navigation {
+			a {
+				color: #fff;
+				margin: auto 10px;
+			}
+		}
+
+		.active {
+		  position: relative;
+		  color: #bdbdbd;
+		}
+
+		.active:after {
+		  width: 70%;
+		  height: 2px;
+		  display: block;
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  background-color: #bdbdbd;
+		  left: 15%;
+		  margin-bottom: 3px;
+		}
+	}
+
+	.cw-user-menu {
+
+		span {
+			color: rgba(134, 134, 134, 0.8);
+		}
+	}
+}

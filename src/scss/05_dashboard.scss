@@ -1,0 +1,65 @@
+//dashboard
+
+.cw-dashboard-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cw-dash-navigation-row {
+	margin: 40px auto 0;
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		text-transform: uppercase;
+		text-align: right;
+		padding: 10px 20px;
+	}
+
+	a:hover {
+		background-color: rgba(227, 238, 249, 0.3);
+	}
+
+	.active {
+		background-color: rgba(227, 238, 249, 0.8);
+	}
+
+	.first {
+		margin-left: 30px;
+	}
+}
+
+.cw-dashboard-wrapper{
+	padding: 30px;
+	background-color: rgba(227, 238, 249, 0.8);
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.cw-settings-header, .cw-settings-body, .cw-settings-footer {
+	min-width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	h3 {
+		text-align: left;
+	}
+
+	button {
+		margin-right: 20px;
+	}
+}
+
+.cw-settings-header, .cw-settings-footer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.cw-settings-list {
+	list-style: none;
+}
+
+#edit-profile-form {
+	width: 80%;
+	margin-bottom: 100px;
+}

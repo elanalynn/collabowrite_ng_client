@@ -45,56 +45,6 @@ footer {
 	}
 }
 
-// Main header and navigation
-
-.cw-header {
-	color: #fff;
-	background-color: #096afc;
-
-	.mdl-layout__drawer-button {
-	  background-color: rgba(197, 197, 197, 0.8);
-	}
-
-	.cw-navigation-row {
-		display: flex;
-		justify-content: space-between;
-	  background-color: rgba(0, 0, 0, 0.5);
-	  text-transform: uppercase;
-	  height: 50px;
-
-		.cw-navigation {
-			a {
-				color: #fff;
-				margin: auto 10px;
-			}
-		}
-
-		.active {
-		  position: relative;
-		  color: #bdbdbd;
-		}
-
-		.active:after {
-		  width: 70%;
-		  height: 2px;
-		  display: block;
-		  position: absolute;
-		  bottom: 0;
-		  left: 0;
-		  background-color: #bdbdbd;
-		  left: 15%;
-		  margin-bottom: 3px;
-		}
-	}
-
-	.cw-user-menu {
-
-		span {
-			color: rgba(134, 134, 134, 0.8);
-		}
-	}
-}
-
 // home content
 
 #intro, #about, #howitworks, #guidelines {
@@ -171,75 +121,6 @@ footer {
 	border: 8px solid #d400ff;
 }
 
-
-//dashboard
-
-.cw-dashboard-header {
-	display: flex;
-	justify-content: space-between;
-}
-
-.cw-dash-navigation-row {
-	margin: 40px auto 0;
-	display: flex;
-	justify-content: space-between;
-
-	a {
-		text-transform: uppercase;
-		text-align: right;
-		padding: 10px 20px;
-	}
-
-	a:hover {
-		background-color: rgba(227, 238, 249, 0.3);
-	}
-
-	.active {
-		background-color: rgba(227, 238, 249, 0.8);
-	}
-
-	.first {
-		margin-left: 30px;
-	}
-}
-
-.cw-dashboard-wrapper{
-	padding: 30px;
-	background-color: rgba(227, 238, 249, 0.8);
-	border-radius: 3px;
-	margin: 0 auto;
-}
-
-.cw-settings-header, .cw-settings-body, .cw-settings-footer {
-	min-width: 100%;
-	display: flex;
-	justify-content: space-between;
-
-	h3 {
-		text-align: left;
-	}
-
-	button {
-		margin-right: 20px;
-	}
-}
-
-.cw-settings-header, .cw-settings-footer {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.cw-settings-list {
-	list-style: none;
-}
-
-
-// Dashboard - profile
-
-#edit-profile-form {
-	width: 80%;
-	margin-bottom: 100px;
-}
 
 // General and stories layout
 
@@ -344,74 +225,6 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 	font-size: 2em;
 }
 
-// Utilities
-
-.cw-form-button {
-	margin-top: 20px;
-	align-self: flex-end;
-}
-
-.cw-circle {
-	border-radius: 50%;
-	align-self: flex-end;
-}
-
-.cw-circle-small {
-	border-radius: 50%;
-	width: 100%;
-}
-
-.cw-bg-danger {
-	background-color: #db078d;
-}
-
-.cw-button-delete {
-	margin-top: 100px;
-}
-
-.cw-dialog {
-	width: 100%;
-	height: 100%;
-	padding: 100px;
-	display: flex;
-	justify-content: center;
-
-	.cw-ngdialog-content {
-		padding: 20px;
-		height: 400px;
-		z-index: 1000;
-	}
-
-	.cw-ngdialog-close {
-		font-size: 2em;
-		padding: 10px;
-	}
-
-	h2 {
-		color: #004efb;
-		font-size: 2.5em;
-	}
-
-	p, .p-font {
-		color: #333;
-		text-align: center;
-		font-family: 'Lato';
-		font-size: 1.5em;
-
-	}
-
-	.cw-ngdialog-buttons {
-		align-self: center;
-		display: flex;
-		justify-content: space-around;
-
-		button {
-			margin: 10px;
-		}
-	}
-}
-
-
 // User Styles
 
 .user-stories {
@@ -425,42 +238,8 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 	margin-bottom: -5px;
 }
 
-
 .cw-resource-header {
 	display: flex;
 	margin: 20px 12px 0 50px;
 	justify-content: space-between;
-}
-
-// Expandable Search
-
-.cw-expandable-search {
-	align-self: flex-end;
-  align-items: center;
-	display: flex;
-  justify-content: center;
-}
-
-.cw-expandable-search form {
-	width: 100%;
-  max-width: 250px;
-}
-
-.cw-expandable-search,
-.cw-expandable-search form,
-.cw-expandable-search input {
-	display: flex;
-}
-
-.cw-expandable-search .material-icons {
-  margin-right: -40px;
-}
-
-.cw-expandable-search input {
-  outline: none;
-  border: none;
-  font-size: 1.2em;
-  padding: 0px 35px 0px 70px;
-  height: 40px;
-	background-color: rgba(209, 213, 246, 0.3);
 }
