@@ -26,7 +26,6 @@ function UserController($stateParams, $state, $location, authService, userServic
   if ($state.current.name === 'profile') {
     userService.getProfile($stateParams.id)
     .then(profile => {
-      console.log(profile.data)
       vm.profile = profile.data
     })
   }
