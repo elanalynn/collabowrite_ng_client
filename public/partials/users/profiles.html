@@ -9,7 +9,7 @@
       <div class="mdl-card__supporting-text">
         <p class="user-preview-header" ng-hide="profile.stories.length > 0">No stories</p>
         <p class="user-preview-header" ng-show="profile.stories.length > 0">Latest stories...</p>
-        <ul class="user-stories" ng-repeat="story in profile.stories">
+        <ul class="user-stories" ng-repeat="story in profile.stories | limitTo:2">
           <li><a ui-sref="story_detail({id: story.id})">{{story.title}}</a></li>
         </ul>
       </div>
