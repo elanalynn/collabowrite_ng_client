@@ -1,7 +1,15 @@
 <article class="cw-container">
-  <h1>CollaboWriters</h1>
+  <section class="cw-resource-header">
+    <h2>CollaboWriters</h2>
+    <div class="cw-expandable-search mdl-cell--hide-phone">
+      <i class="material-icons">search</i>
+      <form action="#">
+        <input type="text" placeholder="Search" class="search" ng-model="vm.search">
+      </form>
+    </div>
+  </section>
   <div class="mdl-grid">
-    <div class="mdl-cell" ng-repeat="profile in vm.profiles">
+    <div class="mdl-cell" ng-repeat="profile in vm.profiles | filter:vm.search">
       <div class="demo-card-square mdl-card cw-card mdl-shadow--2dp">
       <div class="mdl-card__title" ng-style="{ 'background-image' : 'url({{profile.avatar}})' , 'background-size' : 'cover' }">
         <h2 class="mdl-card__title-text">{{profile.first_name}} {{profile.last_name}}</h2>

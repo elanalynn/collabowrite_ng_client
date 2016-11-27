@@ -3,6 +3,7 @@ UserController.$inject = ['$stateParams', '$state', '$location', 'authService', 
 function UserController($stateParams, $state, $location, authService, userService, storyService) {
 
   const vm = this
+  vm.search = ''
 
   authService.getCurrentUser().then(user => vm.user = user)
 

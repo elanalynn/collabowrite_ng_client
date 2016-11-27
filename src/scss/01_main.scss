@@ -425,13 +425,14 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 	margin-bottom: -5px;
 }
 
-// Expandable Search
 
-.cw-stories-header {
+.cw-resource-header {
 	display: flex;
 	margin: 20px 12px 0 50px;
 	justify-content: space-between;
 }
+
+// Expandable Search
 
 .cw-expandable-search {
 	align-self: flex-end;
