@@ -424,3 +424,42 @@ textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
 .user-preview-header {
 	margin-bottom: -5px;
 }
+
+// Expandable Search
+
+.cw-stories-header {
+	display: flex;
+	margin: 20px 12px 0 50px;
+	justify-content: space-between;
+}
+
+.cw-expandable-search {
+	align-self: flex-end;
+  align-items: center;
+	display: flex;
+  justify-content: center;
+}
+
+.cw-expandable-search form {
+	width: 100%;
+  max-width: 250px;
+}
+
+.cw-expandable-search,
+.cw-expandable-search form,
+.cw-expandable-search input {
+	display: flex;
+}
+
+.cw-expandable-search .material-icons {
+  margin-right: -40px;
+}
+
+.cw-expandable-search input {
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 0px 35px 0px 70px;
+  height: 40px;
+	background-color: rgba(209, 213, 246, 0.3);
+}

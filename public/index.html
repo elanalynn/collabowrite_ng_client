@@ -47,9 +47,13 @@
           <a ui-sref-active="active" class="mdl-navigation__link" href="/#about">About</a>
           <a ui-sref-active="active" class="mdl-navigation__link" href="/#guidelines">Guidelines</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="stories">Browse</a>
-          <!-- <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="users">Writers</a> -->
+          <a ui-sref-active="active" ui-sref="profiles" ng-show="vm.user">Writers</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ng-show="vm.user" ui-sref="dashboard.profile">Dashboard</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ng-show="!vm.user"  href="http://localhost:3000/api/v1/auth/twitter">Login</a>
+          <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect cw-user-menu" for="demo-menu-lower-right">
+            <a class="mdl-menu__item" ui-sref="dashboard.profile({id: vm.user.id})"><span>Dashboard</span></a>
+            <a class="mdl-menu__item" href="http://localhost:3000/api/v1/auth/logout"><span>Logout</span></a>
+          </div>
         </nav>
       </div>
       <main ui-view></main>
@@ -57,12 +61,16 @@
   </div> <!-- end wrapper -->
   <footer><span><a href="https://elanalynn.com" target="_blank">Elana Kopelevich</a> &#169;2016 </span></footer>
   <script src="./vendor/javascripts/material.min.js"></script>
-  <script src="./bower_components/mdl-selectfield/dist/mdl-selectfield.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+  <script src="./bower_components/mdl-selectfield/dist/mdl-selectfield.min.js"></script>
   <script src="/vendor/javascripts/ngDialog.min.js"></script>
+
+  <!-- consolidated scripts - uncomment for production -->
   <!-- <script type="text/javascript" src="/javascripts/scripts-min.js"></script> -->
+
+  <!-- app scripts to be consolidated for production -->
   <script type="text/javascript" src="javascripts/services/authService.js"></script>
   <script type="text/javascript" src="javascripts/services/chapterService.js"></script>
   <script type="text/javascript" src="javascripts/services/favoriteService.js"></script>

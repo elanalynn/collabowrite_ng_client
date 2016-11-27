@@ -425,6 +425,43 @@ textarea,
 .user-preview-header {
   margin-bottom: -5px;
 }
+
+.cw-stories-header {
+  display: flex;
+  margin: 20px 12px 0 50px;
+  justify-content: space-between;
+}
+
+.cw-expandable-search {
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cw-expandable-search form {
+  width: 100%;
+  max-width: 250px;
+}
+
+.cw-expandable-search,
+.cw-expandable-search form,
+.cw-expandable-search input {
+  display: flex;
+}
+
+.cw-expandable-search .material-icons {
+  margin-right: -40px;
+}
+
+.cw-expandable-search input {
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 0px 35px 0px 70px;
+  height: 40px;
+  background-color: rgba(209, 213, 246, 0.3);
+}
 .error {
   color: #ed0b4f;
   align-self: flex-start;
@@ -439,10 +476,14 @@ textarea.ng-invalid.ng-touched {
   border: 2px solid #f9947a;
 }
 
-input.ng-valid {
+input.ng-valid.ng-touched {
   border-bottom: 2px solid #27bd2d;
 }
 
-textarea.ng-valid {
+textarea.ng-valid.ng-touched {
   border: 2px solid #27bd2d;
+}
+
+input.search {
+  border: 1px solid #444;
 }

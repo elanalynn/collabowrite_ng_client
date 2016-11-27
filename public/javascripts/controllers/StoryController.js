@@ -4,6 +4,7 @@ function StoryController($state, $stateParams, $location, authService, userServi
 
   const vm = this
   vm.user = null
+  vm.search = ''
 
   authService.getCurrentUser().then(user => {
     vm.user = user.data.user

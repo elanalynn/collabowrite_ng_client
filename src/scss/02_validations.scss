@@ -12,10 +12,14 @@ textarea.ng-invalid.ng-touched {
   border: 2px solid rgba(249, 148, 122, 1);
 }
 
-input.ng-valid {
+input.ng-valid.ng-touched {
   border-bottom: 2px solid rgba(39, 189, 45, 1);
 }
 
-textarea.ng-valid  {
+textarea.ng-valid.ng-touched  {
   border: 2px solid rgba(39, 189, 45, 1);
+}
+
+input.search {
+  border: 1px solid #444;
 }
