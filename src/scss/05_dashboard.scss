@@ -61,7 +61,45 @@
 }
 
 @media (max-width: 800px) {
+
+	.cw-dashboard-wrapper {
+		margin: -40px 0;
+
+		h3 {
+			margin: 0;
+			padding-top: 20px;
+		}
+	}
+
+	main, .cw-card-large {
+		width: 100%;
+		margin: -40px;
+		padding: 0;
+
+		.cw-dashboard-wrapper {
+			width: 100%;
+			margin: 0;
+			padding: 10px;
+		}
+	}
+
+	.cw-dashboard-header {
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			align-self: center;
+			margin-bottom: 20px;
+		}
+	}
+
 	.cw-dash-navigation-row {
+		margin-top: -20px;
+
+		a {
+			padding: 10px;
+		}
+
 		span {
 			display: none;
 		}
