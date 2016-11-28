@@ -8,11 +8,11 @@
       </div>
       <div class="mdl-card__supporting-text">
         <nav class="cw-dash-navigation-row">
-          <a ng-class="vm.getState('/profile')" class="first mdl-navigation__link" ui-sref="dashboard.profile">Profile</a>
-          <a ng-class="vm.getState('/stories')" class="mdl-navigation__link" ui-sref="dashboard.stories">Stories</a>
-          <a ng-class="vm.getState('/chapters')" class="mdl-navigation__link" ui-sref="dashboard.chapters">Chapters</a>
-          <a ng-class="vm.getState('/favorites')" class="mdl-navigation__link" ui-sref="dashboard.favorites">Favorites</a>
-          <a ng-class="vm.getState('/pending')" class="mdl-navigation__link" ui-sref="dashboard.pending">Pending</a>
+          <a ng-class="vm.getState('/profile')" class="first mdl-navigation__link" ui-sref="dashboard.profile"><span>Profile</span><cw-profile-menu-icon /></a>
+          <a ng-class="vm.getState('/stories')" class="mdl-navigation__link" ui-sref="dashboard.stories"><span>Stories</span><cw-profile-menu-icon /></a>
+          <a ng-class="vm.getState('/chapters')" class="mdl-navigation__link" ui-sref="dashboard.chapters"><span>Chapters</span><cw-profile-menu-icon /></a>
+          <a ng-class="vm.getState('/favorites')" class="mdl-navigation__link" ui-sref="dashboard.favorites"><span>Favorites</span><cw-profile-menu-icon /></a>
+          <a ng-class="vm.getState('/pending')" class="mdl-navigation__link" ui-sref="dashboard.pending"><span>Pending</span><cw-profile-menu-icon /></a>
         </nav>
         <section class="cw-dashboard-wrapper" ui-view></section>
       </div>

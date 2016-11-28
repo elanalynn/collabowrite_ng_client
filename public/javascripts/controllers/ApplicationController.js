@@ -1,13 +1,11 @@
-ApplicationController.$inject = ['$stateParams', 'authService', 'userService', '$rootScope', 'AUTH_EVENTS', 'USER_ROLES']
+ApplicationController.$inject = ['$stateParams', 'authService', 'userService', '$rootScope']
 
-function ApplicationController($stateParams, authService, userService, $rootScope, AUTH_EVENTS, USER_ROLES) {
+function ApplicationController($stateParams, authService, userService, $rootScope) {
   const vm = this
 
   vm.user = null
-  vm.userRoles = USER_ROLES
 
   authService.getCurrentUser().then(data => {
-    // $rootScope.$broadcast(AUTH_EVENTS.loginSuccess)
     if (!data.data.user) return null
     else return data.data.user.id
   })
@@ -18,7 +16,6 @@ function ApplicationController($stateParams, authService, userService, $rootScop
       })
     }
   })
-
 
   vm.setCurrentUser = user => {
     vm.user = user

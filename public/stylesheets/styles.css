@@ -299,10 +299,6 @@ input.search {
   background-color: rgba(227, 238, 249, 0.8);
 }
 
-.cw-dash-navigation-row .first {
-  margin-left: 30px;
-}
-
 .cw-dashboard-wrapper {
   padding: 30px;
   background-color: rgba(227, 238, 249, 0.8);
@@ -343,6 +339,18 @@ input.search {
 #edit-profile-form {
   width: 80%;
   margin-bottom: 100px;
+}
+
+@media (max-width: 800px) {
+  .cw-dash-navigation-row span {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  cw-profile-menu-icon {
+    display: none;
+  }
 }
 .cw-expandable-search {
   align-self: flex-end;

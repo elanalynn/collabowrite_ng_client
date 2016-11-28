@@ -5,18 +5,12 @@ function DashboardController($state, $stateParams, $location, authService, userS
   vm.chapters = []
   vm.favorites = []
 
+  console.log($state.current.name)
+
   // add active class on dashboard tabs
   vm.getState = path => {
-    if (path === $state.current.url) return {active: true}
+    if (path === $state.current.url) return { active: true }
   }
-
-  authService.isAuthorized($stateParams.id)
-  .then(data => {
-    if (!data.data.authorized) {
-      console.log('Not authorized!!')
-      $location.url('/')
-    }
-  })
 
   if (authService.isAuthorized($stateParams.id)) {
     authService.getCurrentUser().then(data => {
@@ -77,5 +71,19 @@ function DashboardController($state, $stateParams, $location, authService, userS
     .then(() => {
       $state.go('home')
     })
+  }
+
+  vm.icons = ['face', 'art_track', 'bookmark', 'favorite', 'schedule']
+
+  vm.setIcon = () => {
+    console.log('setIcon', $state.current.name)
+    switch ($state.current.name) {
+      case 'dashboard.profile': return vm.icons[0]
+      case 'dashboard.stories': return vm.icons[1]
+      case 'dashboard.chapters': return vm.icons[2]
+      case 'dashboard.favorites': return vm.icons[3]
+      case 'dashboard.pending': return vm.icons[4]
+      default: return ''
+    }
   }
 }
