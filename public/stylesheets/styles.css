@@ -1,3 +1,67 @@
+.cw-form-button {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.cw-circle {
+  border-radius: 50%;
+  align-self: flex-end;
+}
+
+.cw-circle-small {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.cw-bg-danger {
+  background-color: #db078d;
+}
+
+.cw-button-delete {
+  margin-top: 100px;
+}
+
+.cw-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.cw-dialog .cw-ngdialog-content {
+  padding: 20px;
+  height: 400px;
+  z-index: 1000;
+}
+
+.cw-dialog .cw-ngdialog-close {
+  font-size: 2em;
+  padding: 10px;
+}
+
+.cw-dialog h2 {
+  color: #004efb;
+  font-size: 2.5em;
+}
+
+.cw-dialog p,
+.cw-dialog .p-font {
+  color: #333;
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 1.5em;
+}
+
+.cw-dialog .cw-ngdialog-buttons {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cw-dialog .cw-ngdialog-buttons button {
+  margin: 10px;
+}
 html,
 body {
   width: 100%;
@@ -124,116 +188,6 @@ footer a {
 
 .share {
   border: 8px solid #d400ff;
-}
-
-.cw-container {
-  width: 1200px;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.cw-card-large {
-  max-width: 100%;
-  margin: 0;
-  padding: 40px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.cw-card-large h4,
-.cw-card-large p {
-  align-self: center;
-  margin-top: -10px;
-}
-
-.cw-card-large .cw-story-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cw-card-large .cw-chapters-header {
-  font-variant: small-caps;
-  margin-top: 30px;
-}
-
-.cw-card-large .cw-chapters-header .title {
-  color: #235566;
-}
-
-.cw-card-large .cw-chapter-body {
-  font-size: 1em;
-  align-self: flex-start;
-}
-
-.cw-card {
-  width: 100%;
-  max-width: 300px;
-  max-height: 300px;
-}
-
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  height: 200px;
-}
-
-.cw-story-cover {
-  max-height: 200px;
-  width: auto;
-  margin-bottom: 40px;
-}
-
-.cw-story-details,
-.cw-chapter-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: -10px;
-}
-
-.owner,
-.genre {
-  font-variant: small-caps;
-  font-size: 1em;
-}
-
-.owner .title,
-.genre .title {
-  font-weight: bold;
-  color: #235566;
-}
-
-.cw-last-contribution {
-  font-size: 1em;
-}
-
-.summary,
-.chapter {
-  font-variant: small-caps;
-  font-size: 1.2em;
-}
-
-.summary .title,
-.chapter .title {
-  color: #235566;
-}
-
-.cw-guidelines {
-  margin: -15px auto 30px;
-  font-size: 1em;
-  font-style: italic;
-  color: #495c7a;
-}
-
-textarea,
-.mdl-textfield,
-.mdl-js-textfield,
-.mdl-textfield--floating-label {
-  width: 100%;
-}
-
-.cw-favorite {
-  cursor: pointer;
-  font-size: 2em;
 }
 
 .user-stories {
@@ -418,69 +372,178 @@ input.search {
   font-size: 1.2em;
   padding: 0px 35px 0px 70px;
   height: 40px;
-  background-color: rgba(209, 213, 246, 0.3);
+  background-color: rgba(209, 213, 246, 0.5);
 }
-.cw-form-button {
-  margin-top: 20px;
-  align-self: flex-end;
-}
-
-.cw-circle {
-  border-radius: 50%;
-  align-self: flex-end;
+.cw-container {
+  width: 1200px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.cw-circle-small {
-  border-radius: 50%;
-  width: 100%;
-}
-
-.cw-bg-danger {
-  background-color: #db078d;
-}
-
-.cw-button-delete {
-  margin-top: 100px;
-}
-
-.cw-dialog {
-  width: 100%;
-  height: 100%;
-  padding: 100px;
+.cw-card-large {
+  max-width: 100%;
+  margin: 0;
+  padding: 40px;
+  background: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.cw-dialog .cw-ngdialog-content {
-  padding: 20px;
-  height: 400px;
-  z-index: 1000;
-}
-
-.cw-dialog .cw-ngdialog-close {
-  font-size: 2em;
-  padding: 10px;
-}
-
-.cw-dialog h2 {
-  color: #004efb;
-  font-size: 2.5em;
-}
-
-.cw-dialog p,
-.cw-dialog .p-font {
-  color: #333;
-  text-align: center;
-  font-family: 'Lato';
-  font-size: 1.5em;
-}
-
-.cw-dialog .cw-ngdialog-buttons {
+.cw-card-large h4,
+.cw-card-large p {
   align-self: center;
-  display: flex;
-  justify-content: space-around;
+  margin-top: -10px;
 }
 
-.cw-dialog .cw-ngdialog-buttons button {
-  margin: 10px;
+.cw-card-large .cw-story-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cw-card-large .cw-chapters-header {
+  font-variant: small-caps;
+  margin-top: 30px;
+}
+
+.cw-card-large .cw-chapters-header .title {
+  color: #235566;
+}
+
+.cw-card-large .cw-chapter-body {
+  font-size: 1em;
+  align-self: flex-start;
+}
+
+.cw-card {
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  height: 200px;
+}
+
+.cw-story-cover {
+  max-height: 200px;
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.cw-story-details,
+.cw-chapter-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
+.owner,
+.genre {
+  font-variant: small-caps;
+  font-size: 1em;
+}
+
+.owner .title,
+.genre .title {
+  font-weight: bold;
+  color: #235566;
+}
+
+.cw-last-contribution {
+  font-size: 1em;
+}
+
+.summary,
+.chapter {
+  font-variant: small-caps;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.summary .title,
+.chapter .title {
+  color: #235566;
+}
+
+.cw-guidelines {
+  margin: -15px auto 30px;
+  font-size: 1em;
+  font-style: italic;
+  color: #495c7a;
+}
+
+textarea,
+.mdl-textfield,
+.mdl-js-textfield,
+.mdl-textfield--floating-label {
+  width: 100%;
+}
+
+.cw-favorite {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.genre-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lets-see-what-happens {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/genre/lets-see-what-happens.png");
+  background-size: cover;
+}
+
+.childrens {
+  background: url("/assets/genre/childrens.png");
+}
+
+.comedy {
+  background: url("/assets/genre/comedy.png");
+}
+
+.drama {
+  background: url("/assets/genre/drama.png");
+}
+
+.fantasy {
+  background: url("/assets/genre/fantasy.png");
+}
+
+.historical {
+  background: url("/assets/genre/historical.png");
+}
+
+.horror {
+  background: url("/assets/genre/horror.png");
+}
+
+.mystery {
+  background: url("/assets/genre/mystery.png");
+}
+
+.romance {
+  background: url("/assets/genre/romance.png");
+}
+
+.satire {
+  background: url("/assets/genre/satire.png");
+}
+
+.scifi {
+  background: url("/assets/genre/scifi.png");
+}
+
+.tragedy {
+  background: url("/assets/genre/tragedy.png");
+}
+
+.genre-icon {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/genre/lets-see-what-happens.png");
+  background-size: cover;
 }

@@ -1,0 +1,131 @@
+.cw-container {
+	width: 1200px;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.cw-card-large {
+	max-width: 100%;
+	margin: 0;
+	padding: 40px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+
+	h4, p {
+		align-self: center;
+		margin-top: -10px;
+	}
+
+	.cw-story-header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.cw-chapters-header {
+		font-variant: small-caps;
+		margin-top: 30px;
+
+		.title {
+			color: rgb(35, 85, 102);
+		}
+	}
+
+	.cw-chapter-body {
+		font-size: 1em;
+		align-self: flex-start;
+	}
+}
+
+.cw-card {
+  width: 100%;
+  max-width: 300px;
+	max-height: 300px;
+}
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+	height: 200px;
+}
+
+.cw-story-cover {
+	max-height: 200px;
+	width: auto;
+	margin-bottom: 40px;
+}
+
+.cw-story-details, .cw-chapter-details {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -10px;
+}
+
+.owner, .genre {
+	font-variant: small-caps;
+	font-size: 1em;
+
+	.title {
+		font-weight: bold;
+		color: #235566;
+	}
+}
+
+.cw-last-contribution {
+	font-size: 1em;
+}
+
+.summary, .chapter {
+	font-variant: small-caps;
+	font-size: 1.2em;
+  margin-bottom: 10px;
+
+	.title {
+		color: rgb(35, 85, 102);
+	}
+}
+
+.cw-guidelines {
+	margin: -15px auto 30px;
+	font-size: 1em;
+	font-style: italic;
+	color: rgb(73, 92, 122);
+}
+
+textarea, .mdl-textfield, .mdl-js-textfield,  .mdl-textfield--floating-label {
+	width: 100%;
+}
+
+.cw-favorite {
+	cursor: pointer;
+	font-size: 2em;
+}
+
+.genre-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lets-see-what-happens {
+  width: 20px;
+  height: 20px;
+  background: url(/assets/genre/lets-see-what-happens.png);
+  background-size: cover;
+}
+.childrens { background: url(/assets/genre/childrens.png); }
+.comedy { background: url(/assets/genre/comedy.png); }
+.drama { background: url(/assets/genre/drama.png); }
+.fantasy { background: url(/assets/genre/fantasy.png); }
+.historical { background: url(/assets/genre/historical.png); }
+.horror { background: url(/assets/genre/horror.png); }
+.mystery { background: url(/assets/genre/mystery.png); }
+.romance { background: url(/assets/genre/romance.png); }
+.satire { background: url(/assets/genre/satire.png); }
+.scifi { background: url(/assets/genre/scifi.png); }
+.tragedy { background: url(/assets/genre/tragedy.png); }
+
+.genre-icon {
+  width: 20px;
+  height: 20px;
+  background: url(/assets/genre/lets-see-what-happens.png);
+  background-size: cover;
+}

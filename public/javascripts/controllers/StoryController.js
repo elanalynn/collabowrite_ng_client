@@ -39,6 +39,8 @@ function StoryController($state, $stateParams, $location, authService, userServi
       vm.story.chapters = details[2].data.data
       vm.story.last_chapter = vm.story.chapters[vm.story.chapters.length - 1]
     })
+
+    vm.styleGenre(1)
   }
 
   if ($state.current.name === 'story_new') {
@@ -110,6 +112,24 @@ function StoryController($state, $stateParams, $location, authService, userServi
         boolean: true,
       })
       .then(() => {})
+    }
+  }
+
+  vm.genreClass = genreId => {
+    switch (genreId) {
+      case 1: return 'lets-see-what-happens'
+      case 2: return 'childrens'
+      case 3: return 'comedy'
+      case 4: return 'drama'
+      case 5: return 'fantasy'
+      case 6: return 'historical'
+      case 7: return 'horror'
+      case 8: return 'mystery'
+      case 9: return 'romance'
+      case 10: return 'satire'
+      case 11: return 'scifi'
+      case 12: return 'tragedy'
+      default: return ''
     }
   }
 }
