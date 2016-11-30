@@ -1,6 +1,6 @@
 authService.$inject = ['__env', '$http', 'sessionService']
 
-function authService($http, sessionService) {
+function authService(__env, $http, sessionService) {
   let service = {}
 
   service.getCurrentUser = () => $http.get(`${__env.apiUrl}/auth/`)
