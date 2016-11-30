@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('collabowrite', ['ui.router', 'ngAnimate', 'ngDialog']).config(config).controller('ApplicationController', ApplicationController).controller('ChapterController', ChapterController).controller('StoryController', StoryController).controller('UserController', UserController).controller('DashboardController', DashboardController).factory('pendingService', pendingService).factory('favoriteService', favoriteService).factory('chapterService', chapterService).factory('storyService', storyService).factory('userService', userService).factory('authService', authService).service('sessionService', sessionService).directive('cwProfileMenuIcon', cwProfileMenuIcon);
+if (window) Object.assign(env, window.__env);
+
+angular.module('collabowrite', ['ui.router', 'ngAnimate', 'ngDialog']).config(config).constant('__env', env).controller('ApplicationController', ApplicationController).controller('ChapterController', ChapterController).controller('StoryController', StoryController).controller('UserController', UserController).controller('DashboardController', DashboardController).factory('pendingService', pendingService).factory('favoriteService', favoriteService).factory('chapterService', chapterService).factory('storyService', storyService).factory('userService', userService).factory('authService', authService).service('sessionService', sessionService).directive('cwProfileMenuIcon', cwProfileMenuIcon);
 'use strict';
 
 config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider'];

@@ -1,6 +1,11 @@
-config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider']
+disableLogging.$inject = ['$logProvider', '__env']
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'] //'$locationProvider', 'disableLogging'
 
-function config($stateProvider, $urlRouterProvider, $httpProvider) { //$locationProvider
+function disableLogging($logProvider, __env){
+  return $logProvider.debugEnabled(__env.enableDebug)
+}
+
+function config($stateProvider, $urlRouterProvider, $httpProvider) { //$locationProvider, disableLogging
   $httpProvider.defaults.withCredentials = true
   $urlRouterProvider.otherwise('/')
   $stateProvider

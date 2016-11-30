@@ -1,6 +1,11 @@
+var env = {}
+
+if(window) Object.assign(env, window.__env)
+
 angular
   .module('collabowrite', ['ui.router', 'ngAnimate', 'ngDialog'])
   .config(config)
+  .constant('__env', env)
   .controller('ApplicationController', ApplicationController)
   .controller('ChapterController', ChapterController)
   .controller('StoryController', StoryController)
