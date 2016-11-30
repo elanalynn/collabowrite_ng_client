@@ -1,4 +1,4 @@
-authService.$inject = [__env, '$http', 'sessionService']
+authService.$inject = ['__env', '$http', 'sessionService']
 
 function authService($http, sessionService) {
   let service = {}
