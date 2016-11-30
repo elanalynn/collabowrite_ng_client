@@ -5,7 +5,7 @@ function authService(__env, $http, sessionService) {
 
   service.getCurrentUser = () => $http.get(`${__env.apiUrl}/auth/`)
 
-  service.isAuthorized = id => $http.get(`${__env.apiUrl}/auth/${id}`)
+  // service.isAuthorized = id => $http.get(`${__env.apiUrl}/auth/${id}`)
 
   return service
 }
