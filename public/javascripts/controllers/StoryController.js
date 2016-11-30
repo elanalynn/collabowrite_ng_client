@@ -40,7 +40,7 @@ function StoryController($state, $stateParams, $location, authService, userServi
       vm.story.last_chapter = vm.story.chapters[vm.story.chapters.length - 1]
     })
 
-    vm.styleClass(1)
+    vm.genreClass(1)
   }
 
   if ($state.current.name === 'story_new') {
