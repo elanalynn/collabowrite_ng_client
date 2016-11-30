@@ -29,14 +29,14 @@
             <a ui-sref-active="active" href="/#guidelines">Guidelines</a>
             <a ui-sref-active="active" ui-sref="stories">Stories</a>
             <a ui-sref-active="active" ui-sref="profiles" ng-show="vm.user">Writers</a>
-            <a href="http://localhost:3000/api/v1/auth/twitter" ng-show="!vm.user">Login</a>
+            <a href=" http://cw-api.elanalynn.com/api/v1/auth/twitter" ng-show="!vm.user">Login</a>
             <a ng-show="vm.user">
               <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
                 <img ng-src="{{vm.user.avatar}}" class="cw-circle-small" alt="avatar" />
               </button>
               <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect cw-user-menu" for="demo-menu-lower-right">
                 <a class="mdl-menu__item" ui-sref="dashboard.profile({id: vm.user.id})"><span>Dashboard</span></a>
-                <a class="mdl-menu__item" href="http://localhost:3000/api/v1/auth/logout"><span>Logout</span></a>
+                <a class="mdl-menu__item" href=" http://cw-api.elanalynn.com/api/v1/auth/logout"><span>Logout</span></a>
               </div>
             </a>
           </nav>
@@ -49,10 +49,10 @@
           <a ui-sref-active="active" class="mdl-navigation__link" ui-sref="stories">Stories</a>
           <a ui-sref-active="active" ui-sref="profiles" ng-show="vm.user">Writers</a>
           <a ui-sref-active="active" class="mdl-navigation__link" ng-show="vm.user" ui-sref="dashboard.profile">Dashboard</a>
-          <a ui-sref-active="active" class="mdl-navigation__link" ng-show="!vm.user"  href="http://localhost:3000/api/v1/auth/twitter">Login</a>
+          <a ui-sref-active="active" class="mdl-navigation__link" ng-show="!vm.user"  href=" http://cw-api.elanalynn.com/api/v1/auth/twitter">Login</a>
           <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect cw-user-menu" for="demo-menu-lower-right">
             <a class="mdl-menu__item" ui-sref="dashboard.profile({id: vm.user.id})"><span>Dashboard</span></a>
-            <a class="mdl-menu__item" href="http://localhost:3000/api/v1/auth/logout"><span>Logout</span></a>
+            <a class="mdl-menu__item" href=" http://cw-api.elanalynn.com/api/v1/auth/logout"><span>Logout</span></a>
           </div>
         </nav>
       </div>
