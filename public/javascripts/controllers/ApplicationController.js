@@ -1,6 +1,6 @@
 ApplicationController.$inject = ['$stateParams', 'authService', 'userService', '$rootScope']
 
-function ApplicationController($stateParams, authService, userService, $rootScope) {
+function ApplicationController($stateParams, authService, userService) {
   const vm = this
 
   vm.user = null

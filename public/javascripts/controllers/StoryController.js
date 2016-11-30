@@ -8,12 +8,12 @@ function StoryController($state, $stateParams, $location, authService, userServi
 
   authService.getCurrentUser().then(user => {
     vm.user = user.data.user
-    if ($stateParams.id) {
-      authService.isAuthorized($stateParams.id)
-      .then(response => {
-        vm.isAuthorized = response.data.authorized
-      })
-    }
+    // if ($stateParams.id) {
+    //   authService.isAuthorized($stateParams.id)
+    //   .then(response => {
+    //     vm.isAuthorized = response.data.authorized
+    //   })
+    // }
   })
 
   if ($state.current.name === 'stories') {
