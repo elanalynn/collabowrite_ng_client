@@ -1,12 +1,12 @@
-chapterService.$inject = ['$http']
+chapterService.$inject = ['__env', '$http']
 
-function chapterService($http){
+function chapterService(__env, $http){
 
   let service = {}
 
-  service.getChaptersByStory = id => $http.get(`http://localhost:3000/api/v1/stories/${id}/chapters`)
-  service.getChapter = id => $http.get(`http://localhost:3000/api/v1/chapters/${id}`)
-  service.createChapter = chapter => $http.post(`http://localhost:3000/api/v1/chapters`, chapter)
+  service.getChaptersByStory = id => $http.get(`${__env.apiUrl}stories/${id}/chapters`)
+  service.getChapter = id => $http.get(`${__env.apiUrl}/chapters/${id}`)
+  service.createChapter = chapter => $http.post(`${__env.apiUrl}/chapters`, chapter)
 
   return service
 }

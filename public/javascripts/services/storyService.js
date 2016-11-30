@@ -1,6 +1,6 @@
-storyService.$inject = ['$http', '__env']
+storyService.$inject = ['__env', '$http']
 
-function storyService($http, __env){
+function storyService(__env, $http){
 
   let service = {}
 

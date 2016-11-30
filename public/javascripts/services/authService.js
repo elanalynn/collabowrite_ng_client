@@ -1,11 +1,11 @@
-authService.$inject = ['$http', 'sessionService']
+authService.$inject = [__env, '$http', 'sessionService']
 
 function authService($http, sessionService) {
   let service = {}
 
-  service.getCurrentUser = () => $http.get('http://localhost:3000/api/v1/auth/')
+  service.getCurrentUser = () => $http.get(`${__env.apiUrl}/auth/`)
 
-  service.isAuthorized = id => $http.get(`http://localhost:3000/api/v1/auth/${id}`)
+  service.isAuthorized = id => $http.get(`${__env.apiUrl}/auth/${id}`)
 
   return service
 }

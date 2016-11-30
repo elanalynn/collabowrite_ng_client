@@ -1,11 +1,11 @@
-pendingService.$inject = ['$http']
+pendingService.$inject = ['__env','$http']
 
-function pendingService($http){
+function pendingService(__env, $http){
 
   let service = {}
 
   service.getPendingChapters = (id, type) => {
-    $http.get(`http://localhost:3000/api/v1/chapters/pending?id=${id}&type=${type}`)
+    $http.get(`${__env.apiUrl}/chapters/pending?id=${id}&type=${type}`)
   }
 
   return service

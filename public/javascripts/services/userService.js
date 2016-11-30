@@ -1,16 +1,16 @@
-userService.$inject = ['$http']
+userService.$inject = ['__env', '$http']
 
-function userService($http){
+function userService(__env, $http){
 
   let service = {}
 
-  service.findOrCreate = user => $http.post('http://localhost:3000/api/v1/users/', user)
-  service.getProfiles = () => $http.get('http://localhost:3000/api/v1/users')
-  service.getProfile = id => $http.get(`http://localhost:3000/api/v1/users/${id}`)
-  service.getUser = id => $http.get(`http://localhost:3000/api/v1/users/${id}`)
-  service.updateUser = user => $http.put(`http://localhost:3000/api/v1/users/${user.id}`, user)
-  service.deactivateUser = id => $http.put(`http://localhost:3000/api/v1/users/${id}`, {is_active: false})
-  service.banUser = id => $http.put(`http://localhost:3000/api/v1/users/${id}`, {is_banned: true})
+  service.findOrCreate = user => $http.post(`${__env.apiUrl}/users/`, user)
+  service.getProfiles = () => $http.get(`${__env.apiUrl}/users`)
+  service.getProfile = id => $http.get(`${__env.apiUrl}/users/${id}`)
+  service.getUser = id => $http.get(`${__env.apiUrl}/users/${id}`)
+  service.updateUser = user => $http.put(`${__env.apiUrl}/users/${user.id}`, user)
+  service.deactivateUser = id => $http.put(`${__env.apiUrl}/users/${id}`, {is_active: false})
+  service.banUser = id => $http.put(`${__env.apiUrl}/users/${id}`, {is_banned: true})
 
   return service
 }
