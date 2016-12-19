@@ -1,3 +1,7 @@
+.bold {
+  font-weight: 700;
+}
+
 .cw-form-button {
   margin-top: 20px;
   align-self: flex-end;
