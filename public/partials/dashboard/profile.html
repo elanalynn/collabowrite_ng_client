@@ -7,14 +7,14 @@
 <section class="cw-settings-body">
 
   <ul class="cw-settings-list">
-    <li>First: {{vm.user.first_name}}</li>
-    <li>Last: {{vm.user.last_name}}</li>
-    <li>Username: {{vm.user.username}}</li>
-    <li>Location: {{vm.user.location}}</li>
-    <li>CollaboWriter Since: {{vm.user.created_at}}</li>
-    <li>Bio: {{vm.user.bio}}</li>
-    <li>Email: {{vm.user.email}}</li>
-    <li>Avatar: </li>
+    <li><span class="bold">First Name:</span> {{vm.user.first_name}}</li>
+    <li><span class="bold">Last Name:</span> {{vm.user.last_name}}</li>
+    <li><span class="bold">Username:</span> {{vm.user.username}}</li>
+    <li><span class="bold">Location:</span> {{vm.user.location}}</li>
+    <li><span class="bold">CollaboWriter Since:</span> {{vm.user.created_at}}</li>
+    <li><span class="bold">Bio:</span> {{vm.user.bio}}</li>
+    <li><span class="bold">Email:</span> {{vm.user.email}}</li>
+    <li><span class="bold">Avatar:</span> </li>
   </ul>
 
   <img ng-src="{{vm.user.avatar}}" class="cw-circle" alt="{{vm.user.first_name}} {{vm.user.last_name}}" />
